@@ -1,0 +1,24 @@
+[workspace]
+authors = ["Benjamin-Yu-Sheng-Chang <benji.chang@mail.utoronto.ca>"]
+channels = ["conda-forge"]
+name = "fullhouse-hackathon"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+cython = ">=3.2.5,<4"
+python = "3.11.*"
+setuptools = ">=82.0.1,<83"
+wheel = ">=0.47.0,<0.48"
+pip = ">=26.1.1,<27"
+
+[pypi-dependencies]
+eval7 = "==0.1.10"
+
+[tool.uv.extra-build-dependencies]
+eval7 = ["Cython"]
+
+[tool.uv.no-build-isolation-package]
+eval7 = true

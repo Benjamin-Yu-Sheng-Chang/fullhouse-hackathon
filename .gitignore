@@ -13,3 +13,6 @@ __pycache__/
 
 # Node
 node_modules/
+# pixi environments
+.pixi/*
+!.pixi/config.toml
