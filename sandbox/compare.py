@@ -40,6 +40,7 @@ BOT_ALIASES = {
 SETUPS = {
     "references": ["template", "aggressor", "mathematician", "shark", "ref_bot_2"],
     "new": ["equity_guard", "position_bully", "trap_steal"],
+    "generated": ["equity_position", "anti_aggro", "short_stack_survivor", "adaptive_hybrid"],
     "equity_versions": ["equity_guard:*"],
     "all": [
         "template",
@@ -50,9 +51,13 @@ SETUPS = {
         "equity_guard",
         "position_bully",
         "trap_steal",
+        "equity_position",
+        "anti_aggro",
+        "short_stack_survivor",
+        "adaptive_hybrid",
     ],
     "anti_aggressor": ["aggressor", "shark", "equity_guard", "trap_steal"],
-    "passive_table": ["template", "mathematician", "ref_bot_2", "position_bully", "equity_guard"],
+    "passive_table": ["template", "mathematician", "ref_bot_2", "position_bully", "equity_guard", "equity_position"],
 }
 
 

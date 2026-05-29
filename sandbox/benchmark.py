@@ -37,8 +37,16 @@ DEFAULT_NEW = "equity_guard:v2"
 DEFAULT_FIELD_SETUPS = {
     "passive": ["template", "mathematician", "ref_bot_2"],
     "reference": ["template", "mathematician", "ref_bot_2", "shark"],
-    "aggressive": ["aggressor", "shark", "position_bully", "trap_steal"],
-    "mixed": ["template", "mathematician", "ref_bot_2", "shark", "position_bully", "trap_steal"],
+    "aggressive": ["aggressor", "shark", "position_bully", "trap_steal", "anti_aggro"],
+    "mixed": [
+        "template",
+        "mathematician",
+        "ref_bot_2",
+        "shark",
+        "position_bully",
+        "equity_position",
+        "adaptive_hybrid",
+    ],
 }
 
 
