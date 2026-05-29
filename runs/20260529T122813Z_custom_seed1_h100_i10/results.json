@@ -1,0 +1,176 @@
+[
+  {
+    "setup": "custom",
+    "bots": [
+      "equity_guard_v1",
+      "equity_guard_v2"
+    ],
+    "bot_paths": {
+      "equity_guard_v1": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/equity_guard/v1",
+      "equity_guard_v2": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/equity_guard/v2"
+    },
+    "iterations": 10,
+    "hands_per_match": 100,
+    "seed_start": 1,
+    "summary": [
+      {
+        "bot_id": "equity_guard_v2",
+        "matches": 10,
+        "total_delta": 31169,
+        "avg_delta": 3116.9,
+        "avg_place": 1.1,
+        "wins": 9,
+        "top_half": 9,
+        "busts": 0,
+        "best_delta": 10000,
+        "worst_delta": -6650,
+        "errors": 0
+      },
+      {
+        "bot_id": "equity_guard_v1",
+        "matches": 10,
+        "total_delta": -31169,
+        "avg_delta": -3116.9,
+        "avg_place": 1.9,
+        "wins": 1,
+        "top_half": 1,
+        "busts": 2,
+        "best_delta": 6650,
+        "worst_delta": -10000,
+        "errors": 0
+      }
+    ],
+    "matches": [
+      {
+        "seed": 1,
+        "hands_played": 100,
+        "duration_s": 0.13,
+        "chip_delta": {
+          "equity_guard_v1": -2473,
+          "equity_guard_v2": 2473
+        },
+        "final_stacks": {
+          "equity_guard_v1": 7527,
+          "equity_guard_v2": 12473
+        }
+      },
+      {
+        "seed": 2,
+        "hands_played": 100,
+        "duration_s": 0.09,
+        "chip_delta": {
+          "equity_guard_v1": 6650,
+          "equity_guard_v2": -6650
+        },
+        "final_stacks": {
+          "equity_guard_v1": 16650,
+          "equity_guard_v2": 3350
+        }
+      },
+      {
+        "seed": 3,
+        "hands_played": 100,
+        "duration_s": 0.1,
+        "chip_delta": {
+          "equity_guard_v1": -2746,
+          "equity_guard_v2": 2746
+        },
+        "final_stacks": {
+          "equity_guard_v1": 7254,
+          "equity_guard_v2": 12746
+        }
+      },
+      {
+        "seed": 4,
+        "hands_played": 100,
+        "duration_s": 0.09,
+        "chip_delta": {
+          "equity_guard_v1": -2250,
+          "equity_guard_v2": 2250
+        },
+        "final_stacks": {
+          "equity_guard_v1": 7750,
+          "equity_guard_v2": 12250
+        }
+      },
+      {
+        "seed": 5,
+        "hands_played": 100,
+        "duration_s": 0.1,
+        "chip_delta": {
+          "equity_guard_v1": -1498,
+          "equity_guard_v2": 1498
+        },
+        "final_stacks": {
+          "equity_guard_v1": 8502,
+          "equity_guard_v2": 11498
+        }
+      },
+      {
+        "seed": 6,
+        "hands_played": 100,
+        "duration_s": 0.1,
+        "chip_delta": {
+          "equity_guard_v1": -2000,
+          "equity_guard_v2": 2000
+        },
+        "final_stacks": {
+          "equity_guard_v1": 8000,
+          "equity_guard_v2": 12000
+        }
+      },
+      {
+        "seed": 7,
+        "hands_played": 25,
+        "duration_s": 0.07,
+        "chip_delta": {
+          "equity_guard_v1": -10000,
+          "equity_guard_v2": 10000
+        },
+        "final_stacks": {
+          "equity_guard_v1": 0,
+          "equity_guard_v2": 20000
+        }
+      },
+      {
+        "seed": 8,
+        "hands_played": 95,
+        "duration_s": 0.09,
+        "chip_delta": {
+          "equity_guard_v1": -10000,
+          "equity_guard_v2": 10000
+        },
+        "final_stacks": {
+          "equity_guard_v1": 0,
+          "equity_guard_v2": 20000
+        }
+      },
+      {
+        "seed": 9,
+        "hands_played": 100,
+        "duration_s": 0.1,
+        "chip_delta": {
+          "equity_guard_v1": -3300,
+          "equity_guard_v2": 3300
+        },
+        "final_stacks": {
+          "equity_guard_v1": 6700,
+          "equity_guard_v2": 13300
+        }
+      },
+      {
+        "seed": 10,
+        "hands_played": 100,
+        "duration_s": 0.1,
+        "chip_delta": {
+          "equity_guard_v1": -3552,
+          "equity_guard_v2": 3552
+        },
+        "final_stacks": {
+          "equity_guard_v1": 6448,
+          "equity_guard_v2": 13552
+        }
+      }
+    ]
+  }
+]

@@ -2,7 +2,7 @@
 authors = ["Benjamin-Yu-Sheng-Chang <benji.chang@mail.utoronto.ca>"]
 channels = ["conda-forge"]
 name = "fullhouse-hackathon"
-platforms = ["win-64"]
+platforms = ["win-64", "osx-arm64"]
 version = "0.1.0"
 
 [tasks]

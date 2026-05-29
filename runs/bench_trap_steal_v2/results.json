@@ -1,0 +1,217 @@
+{
+  "old_bot_id": "trap_steal_v1",
+  "new_bot_id": "trap_steal_v2",
+  "iterations": 5,
+  "hands": 80,
+  "seed_start": 1200,
+  "metric_definitions": {
+    "direct_head_to_head": "Old and new play at the same table over identical seeds.",
+    "paired_field_eval": "Old and new separately face the same opponent setup over identical seeds.",
+    "mean_improvement": "Average per-seed candidate chip delta difference: new_delta - old_delta.",
+    "improvement_win_rate": "Fraction of seeds where new_delta is greater than old_delta.",
+    "top_half_rate": "Fraction of matches where candidate finished in the top half of the table.",
+    "bust_rate": "Fraction of matches where candidate final stack was zero.",
+    "avg_place": "Average finishing position; lower is better.",
+    "worst_delta": "Worst candidate chip delta in a single match; measures downside.",
+    "regressed_setup": "A setup whose mean_improvement is below the configured threshold."
+  },
+  "direct": {
+    "name": "direct_head_to_head",
+    "old_bot_id": "trap_steal_v1",
+    "new_bot_id": "trap_steal_v2",
+    "old": {
+      "total_delta": 12000,
+      "avg_delta": 2400.0,
+      "median_delta": -900,
+      "best_delta": 7950,
+      "worst_delta": -1800,
+      "avg_place": 1.6,
+      "top_half_rate": 0.4,
+      "win_rate": 0.4,
+      "bust_rate": 0.0
+    },
+    "new": {
+      "total_delta": -12000,
+      "avg_delta": -2400.0,
+      "median_delta": 900,
+      "best_delta": 1800,
+      "worst_delta": -7950,
+      "avg_place": 1.4,
+      "top_half_rate": 0.6,
+      "win_rate": 0.6,
+      "bust_rate": 0.0
+    },
+    "paired": {
+      "mean_improvement": -4800.0,
+      "median_improvement": 1800,
+      "improvement_win_rate": 0.6,
+      "worst_improvement": -15900,
+      "best_improvement": 3600
+    },
+    "per_seed": [
+      {
+        "seed": 1200,
+        "old_delta": -900,
+        "new_delta": 900,
+        "improvement": 1800,
+        "old_place": 2,
+        "new_place": 1
+      },
+      {
+        "seed": 1201,
+        "old_delta": -900,
+        "new_delta": 900,
+        "improvement": 1800,
+        "old_place": 2,
+        "new_place": 1
+      },
+      {
+        "seed": 1202,
+        "old_delta": 7650,
+        "new_delta": -7650,
+        "improvement": -15300,
+        "old_place": 1,
+        "new_place": 2
+      },
+      {
+        "seed": 1203,
+        "old_delta": 7950,
+        "new_delta": -7950,
+        "improvement": -15900,
+        "old_place": 1,
+        "new_place": 2
+      },
+      {
+        "seed": 1204,
+        "old_delta": -1800,
+        "new_delta": 1800,
+        "improvement": 3600,
+        "old_place": 2,
+        "new_place": 1
+      }
+    ]
+  },
+  "field_setups": [
+    {
+      "name": "mixed",
+      "opponents": [
+        "template",
+        "mathematician",
+        "ref_bot_2",
+        "shark",
+        "position_bully_v2",
+        "trap_steal_v2"
+      ],
+      "old_bot_id": "trap_steal_v1",
+      "new_bot_id": "trap_steal_v2",
+      "old": {
+        "total_delta": -18700,
+        "avg_delta": -3740.0,
+        "median_delta": 50,
+        "best_delta": 750,
+        "worst_delta": -10000,
+        "avg_place": 4.0,
+        "top_half_rate": 0.6,
+        "win_rate": 0.0,
+        "bust_rate": 0.4
+      },
+      "new": {
+        "total_delta": -17183,
+        "avg_delta": -3436.6,
+        "median_delta": 550,
+        "best_delta": 1350,
+        "worst_delta": -10000,
+        "avg_place": 3.6,
+        "top_half_rate": 0.6,
+        "win_rate": 0.2,
+        "bust_rate": 0.4
+      },
+      "paired": {
+        "mean_improvement": 303.4,
+        "median_improvement": 50,
+        "improvement_win_rate": 0.6,
+        "worst_improvement": 0,
+        "best_improvement": 867,
+        "top_half_rate_change": 0.0,
+        "bust_rate_change": 0.0,
+        "avg_place_change": -0.3999999999999999
+      },
+      "per_seed": [
+        {
+          "seed": 101200,
+          "old_delta": -10000,
+          "new_delta": -10000,
+          "improvement": 0,
+          "old_place": 6,
+          "new_place": 6,
+          "old_top_half": false,
+          "new_top_half": false,
+          "old_busted": true,
+          "new_busted": true
+        },
+        {
+          "seed": 101201,
+          "old_delta": 750,
+          "new_delta": 1350,
+          "improvement": 600,
+          "old_place": 2,
+          "new_place": 1,
+          "old_top_half": true,
+          "new_top_half": true,
+          "old_busted": false,
+          "new_busted": false
+        },
+        {
+          "seed": 101202,
+          "old_delta": -10000,
+          "new_delta": -10000,
+          "improvement": 0,
+          "old_place": 7,
+          "new_place": 7,
+          "old_top_half": false,
+          "new_top_half": false,
+          "old_busted": true,
+          "new_busted": true
+        },
+        {
+          "seed": 101203,
+          "old_delta": 50,
+          "new_delta": 917,
+          "improvement": 867,
+          "old_place": 3,
+          "new_place": 2,
+          "old_top_half": true,
+          "new_top_half": true,
+          "old_busted": false,
+          "new_busted": false
+        },
+        {
+          "seed": 101204,
+          "old_delta": 500,
+          "new_delta": 550,
+          "improvement": 50,
+          "old_place": 2,
+          "new_place": 2,
+          "old_top_half": true,
+          "new_top_half": true,
+          "old_busted": false,
+          "new_busted": false
+        }
+      ]
+    }
+  ],
+  "acceptance": {
+    "passed": false,
+    "direct_head_to_head_ok": false,
+    "improved_setup_count": 1,
+    "regressed_setup_count": 0,
+    "bust_regression_count": 0,
+    "regressed_setups": [],
+    "bust_regression_setups": [],
+    "rules": {
+      "min_mean_improvement": 0.0,
+      "max_bust_rate_increase": 0.1,
+      "max_bad_setups": 0
+    }
+  }
+}

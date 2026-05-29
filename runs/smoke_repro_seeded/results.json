@@ -1,0 +1,91 @@
+[
+  {
+    "setup": "custom",
+    "bots": [
+      "equity_guard_v1",
+      "equity_guard_v2",
+      "mathematician"
+    ],
+    "bot_paths": {
+      "equity_guard_v1": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/equity_guard/v1",
+      "equity_guard_v2": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/equity_guard/v2",
+      "mathematician": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/mathematician/bot.py"
+    },
+    "iterations": 2,
+    "hands_per_match": 40,
+    "seed_start": 1234,
+    "summary": [
+      {
+        "bot_id": "equity_guard_v2",
+        "matches": 2,
+        "total_delta": 971,
+        "avg_delta": 485.5,
+        "avg_place": 1.0,
+        "wins": 2,
+        "top_half": 2,
+        "busts": 0,
+        "best_delta": 721,
+        "worst_delta": 250,
+        "errors": 0
+      },
+      {
+        "bot_id": "equity_guard_v1",
+        "matches": 2,
+        "total_delta": 229,
+        "avg_delta": 114.5,
+        "avg_place": 2.5,
+        "wins": 0,
+        "top_half": 0,
+        "busts": 0,
+        "best_delta": 529,
+        "worst_delta": -300,
+        "errors": 0
+      },
+      {
+        "bot_id": "mathematician",
+        "matches": 2,
+        "total_delta": -1200,
+        "avg_delta": -600.0,
+        "avg_place": 2.5,
+        "wins": 0,
+        "top_half": 0,
+        "busts": 0,
+        "best_delta": 50,
+        "worst_delta": -1250,
+        "errors": 0
+      }
+    ],
+    "matches": [
+      {
+        "seed": 1234,
+        "hands_played": 40,
+        "duration_s": 1.26,
+        "chip_delta": {
+          "equity_guard_v1": 529,
+          "equity_guard_v2": 721,
+          "mathematician": -1250
+        },
+        "final_stacks": {
+          "equity_guard_v1": 10529,
+          "equity_guard_v2": 10721,
+          "mathematician": 8750
+        }
+      },
+      {
+        "seed": 1235,
+        "hands_played": 40,
+        "duration_s": 0.68,
+        "chip_delta": {
+          "equity_guard_v1": -300,
+          "equity_guard_v2": 250,
+          "mathematician": 50
+        },
+        "final_stacks": {
+          "equity_guard_v1": 9700,
+          "equity_guard_v2": 10250,
+          "mathematician": 10050
+        }
+      }
+    ]
+  }
+]

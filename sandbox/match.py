@@ -7,6 +7,7 @@ Prod mode (USE_DOCKER=true):  bots run in isolated Docker containers
 
 Submission formats supported (auto-detected from path):
   - bot.py         single-file bot (legacy)
+  - bot.pybak      archived single-file bot snapshot
   - bot/           directory containing bot.py + optional data/
   - bot.zip        archive containing bot.py at root + optional data/
 
@@ -50,7 +51,7 @@ MATCH_LOG_MAX_ENTRIES = 200
 
 def _prepare_bot_mount(bot_path):
     """Returns (mount_src, cleanup_dir).
-    Accepts: directory, .zip archive (extracted into tempdir), or .py file (legacy, copied into tempdir).
+    Accepts: directory, .zip archive (extracted into tempdir), or .py/.pybak file (copied into tempdir).
     """
     p = os.path.abspath(bot_path)
 
@@ -78,12 +79,12 @@ def _prepare_bot_mount(bot_path):
             raise ValueError("Zip archive must contain bot.py at the root")
         return tmpdir, tmpdir
 
-    if p.endswith(".py") and os.path.isfile(p):
+    if (p.endswith(".py") or p.endswith(".pybak")) and os.path.isfile(p):
         tmpdir = tempfile.mkdtemp(prefix="fhbot_")
         shutil.copy(p, os.path.join(tmpdir, "bot.py"))
         return tmpdir, tmpdir
 
-    raise ValueError("Unsupported bot path (must be .py, .zip, or directory): " + repr(p))
+    raise ValueError("Unsupported bot path (must be .py, .pybak, .zip, or directory): " + repr(p))
 
 
 # ---------------------------------------------------------------------------
@@ -95,9 +96,10 @@ class BotProcess:
     Communication: newline-delimited JSON over stdin/stdout.
     """
 
-    def __init__(self, bot_id, bot_path):
+    def __init__(self, bot_id, bot_path, match_seed=None):
         self.bot_id   = bot_id
         self.bot_path = bot_path
+        self.match_seed = match_seed
         self.errors   = []
         self._cleanup_dir = None
 
@@ -142,6 +144,8 @@ class BotProcess:
             "BOT_DATA_DIR":   "/bot/data" if USE_DOCKER else os.path.join(self._mount_src, "data"),
             "ACTION_TIMEOUT": str(ACTION_TIMEOUT),
         }
+        if self.match_seed is not None:
+            env["BOT_RANDOM_SEED"] = str(self.match_seed) + ":" + self.bot_id
 
         return subprocess.Popen(
             cmd,
@@ -227,7 +231,7 @@ def run_match(match_id, bot_paths, n_hands=400, verbose=False, seed=None):
     n = len(bot_ids)
     assert 2 <= n <= 9, "Need 2-9 bots, got " + str(n)
 
-    procs   = {bid: BotProcess(bid, path) for bid, path in bot_paths.items()}
+    procs   = {bid: BotProcess(bid, path, seed) for bid, path in bot_paths.items()}
     stacks  = {bid: STARTING_STACK for bid in bot_ids}
     hand_log = []
     match_action_log = []
@@ -346,7 +350,7 @@ if __name__ == "__main__":
         # fall back to the parent directory name. If that also collides
         # (e.g. the same bot path passed twice for self-play testing),
         # append a numeric suffix so every entry is unique.
-        if suffix in (".py", ".zip"):
+        if suffix in (".py", ".pybak", ".zip"):
             bot_id = pp.stem
         else:
             bot_id = pp.name or "bot_" + str(i)

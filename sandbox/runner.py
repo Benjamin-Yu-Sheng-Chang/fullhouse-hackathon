@@ -18,7 +18,9 @@ daemon-flagged so it dies with the process.
 
 import sys
 import json
+import hashlib
 import importlib.util
+import random
 import traceback
 import threading
 import os
@@ -26,6 +28,19 @@ import os
 BOT_PATH        = os.environ.get("BOT_PATH", "/bot/bot.py")
 TIMEOUT         = int(os.environ.get("ACTION_TIMEOUT", "2"))
 WARMUP_TIMEOUT  = int(os.environ.get("WARMUP_TIMEOUT", "30"))
+BOT_RANDOM_SEED = os.environ.get("BOT_RANDOM_SEED")
+
+
+def seed_bot_rngs(seed_text: str | None):
+    if not seed_text:
+        return
+    seed = int(hashlib.sha256(seed_text.encode("utf-8")).hexdigest()[:16], 16)
+    random.seed(seed)
+    try:
+        import numpy as np
+    except Exception:
+        return
+    np.random.seed(seed % (2**32))
 
 
 def load_bot(path: str):
@@ -72,6 +87,7 @@ def _call_with_timeout(fn, arg, timeout_s):
 
 
 def main():
+    seed_bot_rngs(BOT_RANDOM_SEED)
     try:
         bot = load_bot(BOT_PATH)
     except Exception as e:

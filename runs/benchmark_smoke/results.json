@@ -1,0 +1,154 @@
+{
+  "old_bot_id": "equity_guard_v1",
+  "new_bot_id": "equity_guard_v2",
+  "iterations": 2,
+  "hands": 30,
+  "seed_start": 42,
+  "metric_definitions": {
+    "direct_head_to_head": "Old and new play at the same table over identical seeds.",
+    "paired_field_eval": "Old and new separately face the same opponent setup over identical seeds.",
+    "mean_improvement": "Average per-seed candidate chip delta difference: new_delta - old_delta.",
+    "improvement_win_rate": "Fraction of seeds where new_delta is greater than old_delta.",
+    "top_half_rate": "Fraction of matches where candidate finished in the top half of the table.",
+    "bust_rate": "Fraction of matches where candidate final stack was zero.",
+    "avg_place": "Average finishing position; lower is better.",
+    "worst_delta": "Worst candidate chip delta in a single match; measures downside.",
+    "regressed_setup": "A setup whose mean_improvement is below the configured threshold."
+  },
+  "direct": {
+    "name": "direct_head_to_head",
+    "old_bot_id": "equity_guard_v1",
+    "new_bot_id": "equity_guard_v2",
+    "old": {
+      "total_delta": -1300,
+      "avg_delta": -650.0,
+      "median_delta": -650.0,
+      "best_delta": -350,
+      "worst_delta": -950,
+      "avg_place": 2.0,
+      "top_half_rate": 0.0,
+      "win_rate": 0.0,
+      "bust_rate": 0.0
+    },
+    "new": {
+      "total_delta": 1300,
+      "avg_delta": 650.0,
+      "median_delta": 650.0,
+      "best_delta": 950,
+      "worst_delta": 350,
+      "avg_place": 1.0,
+      "top_half_rate": 1.0,
+      "win_rate": 1.0,
+      "bust_rate": 0.0
+    },
+    "paired": {
+      "mean_improvement": 1300.0,
+      "median_improvement": 1300.0,
+      "improvement_win_rate": 1.0,
+      "worst_improvement": 700,
+      "best_improvement": 1900
+    },
+    "per_seed": [
+      {
+        "seed": 42,
+        "old_delta": -350,
+        "new_delta": 350,
+        "improvement": 700,
+        "old_place": 2,
+        "new_place": 1
+      },
+      {
+        "seed": 43,
+        "old_delta": -950,
+        "new_delta": 950,
+        "improvement": 1900,
+        "old_place": 2,
+        "new_place": 1
+      }
+    ]
+  },
+  "field_setups": [
+    {
+      "name": "passive",
+      "opponents": [
+        "template",
+        "mathematician",
+        "ref_bot_2"
+      ],
+      "old_bot_id": "equity_guard_v1",
+      "new_bot_id": "equity_guard_v2",
+      "old": {
+        "total_delta": -400,
+        "avg_delta": -200.0,
+        "median_delta": -200.0,
+        "best_delta": 50,
+        "worst_delta": -450,
+        "avg_place": 3.0,
+        "top_half_rate": 0.5,
+        "win_rate": 0.0,
+        "bust_rate": 0.0
+      },
+      "new": {
+        "total_delta": 1650,
+        "avg_delta": 825.0,
+        "median_delta": 825.0,
+        "best_delta": 1150,
+        "worst_delta": 500,
+        "avg_place": 1.0,
+        "top_half_rate": 1.0,
+        "win_rate": 1.0,
+        "bust_rate": 0.0
+      },
+      "paired": {
+        "mean_improvement": 1025.0,
+        "median_improvement": 1025.0,
+        "improvement_win_rate": 1.0,
+        "worst_improvement": 950,
+        "best_improvement": 1100,
+        "top_half_rate_change": 0.5,
+        "bust_rate_change": 0.0,
+        "avg_place_change": -2.0
+      },
+      "per_seed": [
+        {
+          "seed": 100042,
+          "old_delta": 50,
+          "new_delta": 1150,
+          "improvement": 1100,
+          "old_place": 2,
+          "new_place": 1,
+          "old_top_half": true,
+          "new_top_half": true,
+          "old_busted": false,
+          "new_busted": false
+        },
+        {
+          "seed": 100043,
+          "old_delta": -450,
+          "new_delta": 500,
+          "improvement": 950,
+          "old_place": 4,
+          "new_place": 1,
+          "old_top_half": false,
+          "new_top_half": true,
+          "old_busted": false,
+          "new_busted": false
+        }
+      ]
+    }
+  ],
+  "acceptance": {
+    "passed": true,
+    "direct_head_to_head_ok": true,
+    "improved_setup_count": 1,
+    "regressed_setup_count": 0,
+    "bust_regression_count": 0,
+    "regressed_setups": [],
+    "bust_regression_setups": [],
+    "rules": {
+      "min_mean_improvement": 0.0,
+      "max_bust_rate_increase": 0.1,
+      "max_bad_setups": 0
+    }
+  }
+}

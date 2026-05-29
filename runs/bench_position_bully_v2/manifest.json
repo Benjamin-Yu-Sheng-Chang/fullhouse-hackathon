@@ -1,0 +1,85 @@
+{
+  "created_at_utc": "2026-05-29T14:09:09.213301+00:00",
+  "metric_definitions": {
+    "direct_head_to_head": "Old and new play at the same table over identical seeds.",
+    "paired_field_eval": "Old and new separately face the same opponent setup over identical seeds.",
+    "mean_improvement": "Average per-seed candidate chip delta difference: new_delta - old_delta.",
+    "improvement_win_rate": "Fraction of seeds where new_delta is greater than old_delta.",
+    "top_half_rate": "Fraction of matches where candidate finished in the top half of the table.",
+    "bust_rate": "Fraction of matches where candidate final stack was zero.",
+    "avg_place": "Average finishing position; lower is better.",
+    "worst_delta": "Worst candidate chip delta in a single match; measures downside.",
+    "regressed_setup": "A setup whose mean_improvement is below the configured threshold."
+  },
+  "bot_sources": {
+    "position_bully_v1": {
+      "bot_id": "position_bully_v1",
+      "type": "position_bully",
+      "version": "v1",
+      "source_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/position_bully/v1/bot.py",
+      "snapshot_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/bench_position_bully_v2/bots/position_bully_v1.pybak",
+      "sha256": "7bcf820dcc5297418434ff3eaf477f6fcca9a69c57b3a3afd12b233174a761dc"
+    },
+    "position_bully_v2": {
+      "bot_id": "position_bully_v2",
+      "type": "position_bully",
+      "version": "v2",
+      "source_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/position_bully/v2/bot.py",
+      "snapshot_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/bench_position_bully_v2/bots/position_bully_v2.pybak",
+      "sha256": "a3938cc6b4dc783ddc6c2e067912cc1774de8d1f1427c706b02b2000fa85cc2e"
+    },
+    "template": {
+      "bot_id": "template",
+      "type": "template",
+      "version": "legacy",
+      "source_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/template/bot.py",
+      "snapshot_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/bench_position_bully_v2/bots/template.pybak",
+      "sha256": "05f7e37469d35454cbced230509a960af1a191b4469a360062a2ed37b43fab13"
+    },
+    "mathematician": {
+      "bot_id": "mathematician",
+      "type": "mathematician",
+      "version": "legacy",
+      "source_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/mathematician/bot.py",
+      "snapshot_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/bench_position_bully_v2/bots/mathematician.pybak",
+      "sha256": "782e554e28f81093bb7d164b89e703fd37c931f0c56bc586f9a488af1261cf4b"
+    },
+    "ref_bot_2": {
+      "bot_id": "ref_bot_2",
+      "type": "ref_bot_2",
+      "version": "legacy",
+      "source_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/ref_bot_2/bot.py",
+      "snapshot_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/bench_position_bully_v2/bots/ref_bot_2.pybak",
+      "sha256": "b617c65292ccc02e2b40e7c9eb9c33f819accdc8bdf250830e1df37fed8a765c"
+    },
+    "shark": {
+      "bot_id": "shark",
+      "type": "shark",
+      "version": "legacy",
+      "source_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/shark/bot.py",
+      "snapshot_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/bench_position_bully_v2/bots/shark.pybak",
+      "sha256": "1409a778b3cc6905196194d834a77be7fcfdc0f5a02213121501bb7bcf09edf9"
+    },
+    "trap_steal_v2": {
+      "bot_id": "trap_steal_v2",
+      "type": "trap_steal",
+      "version": "v2",
+      "source_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/trap_steal/v2/bot.py",
+      "snapshot_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/bench_position_bully_v2/bots/trap_steal_v2.pybak",
+      "sha256": "1bb9bf8a3675e28709438423d763abfdfad784e67ee7bb998b2d81922245ed47"
+    }
+  },
+  "replay_command": "python3 sandbox/benchmark.py --old '/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/bench_position_bully_v2/bots/position_bully_v1.pybak' --new '/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/bench_position_bully_v2/bots/position_bully_v2.pybak' --iterations 5 --hands 80 --seed 1100 --no-save-run --opponents '/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/bench_position_bully_v2/bots/template.pybak' '/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/bench_position_bully_v2/bots/mathematician.pybak' '/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/bench_position_bully_v2/bots/ref_bot_2.pybak' '/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/bench_position_bully_v2/bots/shark.pybak' '/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/bench_position_bully_v2/bots/trap_steal_v2.pybak'",
+  "settings": {
+    "old": "position_bully:v1",
+    "new": "position_bully:v2",
+    "iterations": 5,
+    "hands": 80,
+    "seed_start": 1100,
+    "seed_end": 1104,
+    "setups": [
+      "mixed"
+    ],
+    "opponents": null
+  }
+}

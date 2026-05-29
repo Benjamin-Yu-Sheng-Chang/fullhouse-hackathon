@@ -1,0 +1,110 @@
+[
+  {
+    "setup": "references",
+    "bots": [
+      "template",
+      "aggressor",
+      "mathematician",
+      "shark",
+      "ref_bot_2"
+    ],
+    "bot_paths": {
+      "template": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/template/bot.py",
+      "aggressor": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/aggressor/bot.py",
+      "mathematician": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/mathematician/bot.py",
+      "shark": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/shark/bot.py",
+      "ref_bot_2": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/ref_bot_2/bot.py"
+    },
+    "iterations": 1,
+    "hands_per_match": 100,
+    "seed_start": 20260529,
+    "summary": [
+      {
+        "bot_id": "aggressor",
+        "matches": 1,
+        "total_delta": 19678,
+        "avg_delta": 19678.0,
+        "avg_place": 1.0,
+        "wins": 1,
+        "top_half": 1,
+        "busts": 0,
+        "best_delta": 19678,
+        "worst_delta": 19678,
+        "errors": 0
+      },
+      {
+        "bot_id": "template",
+        "matches": 1,
+        "total_delta": -3000,
+        "avg_delta": -3000.0,
+        "avg_place": 2.0,
+        "wins": 0,
+        "top_half": 1,
+        "busts": 0,
+        "best_delta": -3000,
+        "worst_delta": -3000,
+        "errors": 0
+      },
+      {
+        "bot_id": "ref_bot_2",
+        "matches": 1,
+        "total_delta": -3200,
+        "avg_delta": -3200.0,
+        "avg_place": 3.0,
+        "wins": 0,
+        "top_half": 0,
+        "busts": 0,
+        "best_delta": -3200,
+        "worst_delta": -3200,
+        "errors": 0
+      },
+      {
+        "bot_id": "mathematician",
+        "matches": 1,
+        "total_delta": -4160,
+        "avg_delta": -4160.0,
+        "avg_place": 4.0,
+        "wins": 0,
+        "top_half": 0,
+        "busts": 0,
+        "best_delta": -4160,
+        "worst_delta": -4160,
+        "errors": 0
+      },
+      {
+        "bot_id": "shark",
+        "matches": 1,
+        "total_delta": -9318,
+        "avg_delta": -9318.0,
+        "avg_place": 5.0,
+        "wins": 0,
+        "top_half": 0,
+        "busts": 0,
+        "best_delta": -9318,
+        "worst_delta": -9318,
+        "errors": 0
+      }
+    ],
+    "matches": [
+      {
+        "seed": 20260529,
+        "hands_played": 100,
+        "duration_s": 0.82,
+        "chip_delta": {
+          "template": -3000,
+          "aggressor": 19678,
+          "mathematician": -4160,
+          "shark": -9318,
+          "ref_bot_2": -3200
+        },
+        "final_stacks": {
+          "template": 7000,
+          "aggressor": 29678,
+          "mathematician": 5840,
+          "shark": 682,
+          "ref_bot_2": 6800
+        }
+      }
+    ]
+  }
+]

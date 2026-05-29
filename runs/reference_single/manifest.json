@@ -1,0 +1,63 @@
+{
+  "created_at_utc": "2026-05-29T10:36:03.124070+00:00",
+  "iterations": 1,
+  "hands": 100,
+  "seed_start": 20260529,
+  "seed_end": 20260529,
+  "json_output_requested": false,
+  "requested_setups": [
+    {
+      "name": "references",
+      "bot_tokens": [
+        "template",
+        "aggressor",
+        "mathematician",
+        "shark",
+        "ref_bot_2"
+      ]
+    }
+  ],
+  "bot_sources": {
+    "template": {
+      "bot_id": "template",
+      "type": "template",
+      "version": "legacy",
+      "source_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/template/bot.py",
+      "snapshot_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/reference_single/bots/template.pybak",
+      "sha256": "05f7e37469d35454cbced230509a960af1a191b4469a360062a2ed37b43fab13"
+    },
+    "aggressor": {
+      "bot_id": "aggressor",
+      "type": "aggressor",
+      "version": "legacy",
+      "source_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/aggressor/bot.py",
+      "snapshot_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/reference_single/bots/aggressor.pybak",
+      "sha256": "04db5e1eeb0f3e39b6325af598743c6fe1a57b587d5d54feb5544fea465bff44"
+    },
+    "mathematician": {
+      "bot_id": "mathematician",
+      "type": "mathematician",
+      "version": "legacy",
+      "source_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/mathematician/bot.py",
+      "snapshot_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/reference_single/bots/mathematician.pybak",
+      "sha256": "782e554e28f81093bb7d164b89e703fd37c931f0c56bc586f9a488af1261cf4b"
+    },
+    "shark": {
+      "bot_id": "shark",
+      "type": "shark",
+      "version": "legacy",
+      "source_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/shark/bot.py",
+      "snapshot_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/reference_single/bots/shark.pybak",
+      "sha256": "1409a778b3cc6905196194d834a77be7fcfdc0f5a02213121501bb7bcf09edf9"
+    },
+    "ref_bot_2": {
+      "bot_id": "ref_bot_2",
+      "type": "ref_bot_2",
+      "version": "legacy",
+      "source_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/bots/ref_bot_2/bot.py",
+      "snapshot_path": "/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/reference_single/bots/ref_bot_2.pybak",
+      "sha256": "b617c65292ccc02e2b40e7c9eb9c33f819accdc8bdf250830e1df37fed8a765c"
+    }
+  },
+  "replay_command": "python3 sandbox/compare.py --bots '/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/reference_single/bots/template.pybak' '/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/reference_single/bots/aggressor.pybak' '/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/reference_single/bots/mathematician.pybak' '/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/reference_single/bots/shark.pybak' '/Users/yushe/Desktop/Side Project/hackathon/fullhouse-hackathon/runs/reference_single/bots/ref_bot_2.pybak' --iterations 1 --hands 100 --seed 20260529 --no-save-run"
+}
