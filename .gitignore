@@ -19,3 +19,5 @@ node_modules/
 !.pixi/config.toml
 
 runs/*
+hl_runs/*
+!hl_runs/.gitkeep
