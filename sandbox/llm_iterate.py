@@ -14,10 +14,12 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import hashlib
 import json
 import os
 import re
 import shutil
+import ssl
 import subprocess
 import sys
 import time
@@ -38,6 +40,27 @@ DEFAULT_GOAL = (
     "performance while avoiding higher bust rate. Keep the code readable, standalone, "
     "fast under the 2-second action limit, and validator-safe."
 )
+
+
+def _log(message: str) -> None:
+    stamp = dt.datetime.now().strftime("%H:%M:%S")
+    print(f"[{stamp}] {message}", flush=True)
+
+
+def _load_dotenv(path: Path) -> None:
+    if not path.exists():
+        return
+    for raw_line in path.read_text().splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        if line.startswith("export "):
+            line = line[len("export "):].strip()
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key and key not in os.environ:
+            os.environ[key] = value
 
 
 def _run(cmd: list[str], cwd: Path = ROOT, timeout: int | None = None) -> dict:
@@ -84,9 +107,17 @@ def _next_version(bot_type: str, run_root: Path | None = None) -> str:
     return f"v{max(existing, default=0) + 1}"
 
 
+def _new_run_hash(base_id: str, new_token: str, goal: str, timestamp: str) -> str:
+    nonce = os.urandom(8).hex()
+    material = f"{timestamp}|{base_id}|{new_token}|{goal}|{nonce}"
+    return hashlib.sha256(material.encode("utf-8")).hexdigest()[:10]
+
+
 def _create_run_dir(name: str | None, base_id: str, new_token: str, hl_runs_dir: Path) -> Path:
     timestamp = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    base = name or f"{timestamp}_llm_{base_id}_to_{new_token}"
+    run_hash = _new_run_hash(base_id, new_token, name or "", timestamp)
+    label = name or f"{timestamp}_llm_{base_id}_to_{new_token}"
+    base = f"{run_hash}_{label}"
     candidate = hl_runs_dir / _safe_name(base)
     suffix = 2
     while candidate.exists():
@@ -95,7 +126,23 @@ def _create_run_dir(name: str | None, base_id: str, new_token: str, hl_runs_dir:
     (candidate / "attempts").mkdir(parents=True)
     (candidate / "bots" / "baselines").mkdir(parents=True)
     (candidate / "bots" / "candidates").mkdir(parents=True)
+    (candidate / "RUN_ID").write_text(run_hash + "\n")
     return candidate
+
+
+def _append_run_index(run_dir: Path, manifest: dict) -> None:
+    run_id = (run_dir / "RUN_ID").read_text().strip()
+    entry = {
+        "run_id": run_id,
+        "run_dir": str(run_dir),
+        "created_at_utc": manifest["created_at_utc"],
+        "base": manifest["base"]["token"],
+        "candidate": manifest["candidate"]["token"],
+        "run_name": manifest["settings"].get("run_name"),
+    }
+    index_path = run_dir.parent / "index.jsonl"
+    with index_path.open("a") as handle:
+        handle.write(json.dumps(entry, sort_keys=True) + "\n")
 
 
 def _bot_id_from_bot_py(bot_py: Path) -> str:
@@ -172,7 +219,24 @@ def _extract_python_code(text: str) -> str:
     return text.strip() + "\n"
 
 
-def _deepseek_chat(messages: list[dict], api_key: str, model: str, endpoint: str, temperature: float) -> str:
+def _ssl_context(insecure_ssl: bool):
+    if insecure_ssl:
+        return ssl._create_unverified_context()
+    try:
+        import certifi
+    except Exception:
+        return ssl.create_default_context()
+    return ssl.create_default_context(cafile=certifi.where())
+
+
+def _deepseek_chat(
+    messages: list[dict],
+    api_key: str,
+    model: str,
+    endpoint: str,
+    temperature: float,
+    insecure_ssl: bool = False,
+) -> str:
     payload = json.dumps(
         {
             "model": model,
@@ -190,7 +254,7 @@ def _deepseek_chat(messages: list[dict], api_key: str, model: str, endpoint: str
         method="POST",
     )
     try:
-        with urllib.request.urlopen(req, timeout=120) as resp:
+        with urllib.request.urlopen(req, timeout=120, context=_ssl_context(insecure_ssl)) as resp:
             data = json.loads(resp.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
         body = exc.read().decode("utf-8", errors="replace")
@@ -202,6 +266,8 @@ def _system_prompt() -> str:
     return (
         "You are improving a no-limit Texas Hold'em bot for a local hackathon engine. "
         "Return exactly one complete standalone Python bot.py. Do not include prose. "
+        "At the top of the file, include a short comment block headed 'STRATEGY OVERVIEW' "
+        "that explains the bot's core plan, key thresholds, and expected weaknesses. "
         "The bot must define decide(state). It may import stdlib random/math and allowed "
         "libraries such as eval7/numpy, but must not import network, subprocess, threading, "
         "asyncio, pickle, importlib, or other forbidden modules. It must not read/write files "
@@ -236,6 +302,7 @@ Current bot.py:
 
 Hard requirements:
 - Return a complete standalone bot.py only.
+- Include a top-of-file comment block headed "STRATEGY OVERVIEW" with the plan, key thresholds, and likely weaknesses.
 - Preserve the Fullhouse return format: fold/check/call/raise/all_in.
 - Do not call external APIs or import forbidden runtime modules.
 - Optimize for benchmark.py acceptance: direct head-to-head positive, paired field improvement, no bust-rate regression.
@@ -306,7 +373,10 @@ def _validate_candidate(candidate_path: Path) -> dict:
                 validator_json = json.loads(validator_result["stdout"])
             except json.JSONDecodeError:
                 validator_json = None
-    passed = compile_result["returncode"] == 0 and validator_result and validator_result["returncode"] == 0
+    source = candidate_path.read_text() if candidate_path.exists() else ""
+    overview_ok = "STRATEGY OVERVIEW" in source[:2500]
+    overview_error = None if overview_ok else "Missing top-of-file STRATEGY OVERVIEW comment block."
+    passed = compile_result["returncode"] == 0 and validator_result and validator_result["returncode"] == 0 and overview_ok
     if validator_json is not None:
         passed = passed and bool(validator_json.get("passed"))
     return {
@@ -314,6 +384,8 @@ def _validate_candidate(candidate_path: Path) -> dict:
         "compile": compile_result,
         "validator": validator_result,
         "validator_json": validator_json,
+        "strategy_overview_ok": overview_ok,
+        "strategy_overview_error": overview_error,
     }
 
 
@@ -355,7 +427,33 @@ def _acceptance_passed(benchmark: dict) -> bool:
     return bool(parsed.get("acceptance", {}).get("passed"))
 
 
+def _benchmark_summary_text(benchmark: dict) -> str:
+    parsed = benchmark.get("json")
+    if not isinstance(parsed, dict):
+        return "benchmark output was not valid JSON"
+    acceptance = parsed.get("acceptance", {})
+    chunks = [
+        f"accepted={acceptance.get('passed')}",
+        f"direct_ok={acceptance.get('direct_head_to_head_ok')}",
+        f"improved_setups={acceptance.get('improved_setup_count')}",
+        f"regressed_setups={acceptance.get('regressed_setup_count')}",
+        f"bust_regressions={acceptance.get('bust_regression_count')}",
+    ]
+    direct = parsed.get("direct", {}).get("paired", {})
+    if direct:
+        chunks.append(f"direct_mean_improvement={direct.get('mean_improvement'):+.1f}")
+    setup_bits = []
+    for setup in parsed.get("field_setups", []):
+        paired = setup.get("paired", {})
+        setup_bits.append(f"{setup.get('name')}={paired.get('mean_improvement', 0):+.1f}")
+    if setup_bits:
+        chunks.append("field_mean_improvements[" + ", ".join(setup_bits) + "]")
+    return "; ".join(chunks)
+
+
 def main():
+    _load_dotenv(ROOT / ".env")
+
     parser = argparse.ArgumentParser(description="Use DeepSeek offline to iterate a standalone poker bot.")
     parser.add_argument("--base", required=True, help="Baseline bot token/path, e.g. short_stack_survivor:v1")
     parser.add_argument("--new-type", help="Candidate bot family. Defaults to inferred baseline type.")
@@ -374,10 +472,12 @@ def main():
     parser.add_argument("--model", default="deepseek-chat")
     parser.add_argument("--endpoint", default="https://api.deepseek.com/chat/completions")
     parser.add_argument("--temperature", type=float, default=0.4)
+    parser.add_argument("--insecure-ssl", action="store_true", help="Disable TLS verification for local API experiments.")
     parser.add_argument("--force", action="store_true", help="Reserved for compatibility; hl_runs never overwrites old runs.")
     parser.add_argument("--dry-run", action="store_true", help="Write prompt/context but do not call DeepSeek or modify bot files.")
     args = parser.parse_args()
 
+    _log("Resolving baseline and candidate target")
     base_id, base_path = _resolve_one(args.base)
     inferred = _infer_version(base_path)
     new_type = args.new_type or inferred.get("type")
@@ -389,8 +489,12 @@ def main():
     new_version = args.new_version or _next_version(new_type, hl_runs_dir)
     new_token = f"{new_type}:{new_version}"
     run_dir = _create_run_dir(args.run_name, base_id, new_token.replace(":", "_"), hl_runs_dir)
+    run_id = (run_dir / "RUN_ID").read_text().strip()
+    _log(f"Created run {run_id}: {run_dir}")
+    _log("Copying all baseline bots into immutable run workspace")
     baseline_snapshots = _copy_all_baselines(run_dir)
     base_run_path = _ensure_base_snapshot(run_dir, baseline_snapshots, base_id, base_path)
+    _log(f"Baseline for benchmark: {base_id} -> {base_run_path}")
 
     base_source_path = _source_file_for_bot(base_run_path)
     base_source = base_source_path.read_text()
@@ -412,12 +516,13 @@ def main():
         "settings": vars(args),
     }
     (run_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+    _append_run_index(run_dir, manifest)
     (run_dir / "initial_prompt.txt").write_text(initial_prompt)
     shutil.copyfile(base_source_path, run_dir / "base.pybak")
 
     if args.dry_run:
-        print(f"Dry run written: {run_dir}")
-        print(f"Prompt: {run_dir / 'initial_prompt.txt'}")
+        _log(f"Dry run written: {run_dir}")
+        _log(f"Prompt: {run_dir / 'initial_prompt.txt'}")
         return
 
     api_key = os.environ.get("DEEPSEEK_API_KEY")
@@ -435,10 +540,13 @@ def main():
     accepted = False
 
     for round_index in range(1, args.improvement_rounds + 1):
+        _log(f"Starting improvement round {round_index}/{args.improvement_rounds}")
         source = None
         for attempt in range(1, args.llm_attempts + 1):
+            _log(f"DeepSeek is generating candidate: round {round_index}, attempt {attempt}")
             prompt_for_log = messages[-1]["content"]
-            response = _deepseek_chat(messages, api_key, args.model, args.endpoint, args.temperature)
+            response = _deepseek_chat(messages, api_key, args.model, args.endpoint, args.temperature, args.insecure_ssl)
+            _log("DeepSeek response received; extracting bot.py")
             source = _extract_python_code(response)
             attempt_dir = _write_attempt(run_dir, (round_index - 1) * args.llm_attempts + attempt, prompt_for_log, response, source)
 
@@ -453,8 +561,10 @@ def main():
             (candidate_dir / "validation.json").write_text(json.dumps(validation, indent=2) + "\n")
             final_validation = validation
             if validation["passed"]:
+                _log(f"Validation passed for {candidate_dir}")
                 break
 
+            _log("Validation failed; sending compiler/validator feedback to DeepSeek")
             error_report = json.dumps(validation, indent=2)[:20000]
             messages = [
                 {"role": "system", "content": _system_prompt()},
@@ -463,12 +573,15 @@ def main():
         else:
             raise SystemExit(f"Candidate failed validation after {args.llm_attempts} attempts. See {run_dir}")
 
+        _log(f"Benchmarking baseline vs candidate: {base_id} vs {latest_candidate_dir}")
         final_benchmark = _benchmark(base_run_path, str(latest_candidate_dir), args, run_dir)
         (run_dir / f"benchmark_round_{round_index:02d}.json").write_text(json.dumps(final_benchmark, indent=2) + "\n")
         accepted = _acceptance_passed(final_benchmark)
+        _log("Benchmark metrics: " + _benchmark_summary_text(final_benchmark))
         if accepted or round_index == args.improvement_rounds:
             break
 
+        _log("Candidate was not accepted; asking DeepSeek for a metric-aware revision")
         metrics_text = json.dumps(final_benchmark.get("json") or final_benchmark, indent=2)[:30000]
         messages = [
             {"role": "system", "content": _system_prompt()},
@@ -486,6 +599,8 @@ def main():
         "benchmark_acceptance": (final_benchmark.get("json") or {}).get("acceptance") if final_benchmark else None,
     }
     (run_dir / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
+    _log(f"Final candidate: {latest_candidate_path}")
+    _log(f"Run summary: {run_dir / 'summary.json'}")
     print(json.dumps(summary, indent=2))
 
 
