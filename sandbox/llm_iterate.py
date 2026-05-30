@@ -107,17 +107,18 @@ def _next_version(bot_type: str, run_root: Path | None = None) -> str:
     return f"v{max(existing, default=0) + 1}"
 
 
-def _new_run_hash(base_id: str, new_token: str, goal: str, timestamp: str) -> str:
+def _new_run_hex(base_id: str, new_token: str, goal: str, timestamp: str) -> str:
     nonce = os.urandom(8).hex()
     material = f"{timestamp}|{base_id}|{new_token}|{goal}|{nonce}"
-    return hashlib.sha256(material.encode("utf-8")).hexdigest()[:10]
+    return hashlib.sha256(material.encode("utf-8")).hexdigest()[:8]
 
 
 def _create_run_dir(name: str | None, base_id: str, new_token: str, hl_runs_dir: Path) -> Path:
-    timestamp = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    run_hash = _new_run_hash(base_id, new_token, name or "", timestamp)
-    label = name or f"{timestamp}_llm_{base_id}_to_{new_token}"
-    base = f"{run_hash}_{label}"
+    now = dt.datetime.now(dt.timezone.utc)
+    timestamp = now.strftime("%y%m%d_%H%M%S")
+    run_hex = _new_run_hex(base_id, new_token, name or "", now.isoformat())
+    label = name or f"llm_{base_id}_to_{new_token}"
+    base = f"{timestamp}_{run_hex}_{label}"
     candidate = hl_runs_dir / _safe_name(base)
     suffix = 2
     while candidate.exists():
@@ -126,7 +127,7 @@ def _create_run_dir(name: str | None, base_id: str, new_token: str, hl_runs_dir:
     (candidate / "attempts").mkdir(parents=True)
     (candidate / "bots" / "baselines").mkdir(parents=True)
     (candidate / "bots" / "candidates").mkdir(parents=True)
-    (candidate / "RUN_ID").write_text(run_hash + "\n")
+    (candidate / "RUN_ID").write_text(run_hex + "\n")
     return candidate
 
 
