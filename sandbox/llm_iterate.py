@@ -59,6 +59,17 @@ FULL_SELECTION_BASELINES = [
 ]
 MAX_TABLE_BOTS = 9
 CURVE_EXCLUDED_TRAINING_PREFIXES = ("shark", "ref_bot_2")
+FAMILY_CURVE_OPPONENTS = [
+    "mathematician",
+    "aggressor",
+    "equity_guard",
+    "position_bully",
+    "trap_steal",
+    "short_stack_survivor",
+    "adaptive_hybrid",
+    "equity_position",
+    "anti_aggro",
+]
 FINALIST_BASELINES = [
     "equity_guard",
     "position_bully",
@@ -969,28 +980,14 @@ def _plot_training_curve(curve_dir: Path, summaries: list[dict]) -> list[str]:
     )
 
 
-def _plot_validation_curve(curve_dir: Path, summaries: list[dict]) -> list[str]:
-    return _plot_metric_curves(
-        curve_dir,
-        summaries,
-        [
-            ("validation_curve_avg_delta.png", "avg_delta", "Validation Average Chip Delta"),
-            ("validation_curve_win_rate.png", "win_rate", "Validation Win Rate"),
-            ("validation_curve_bust_rate.png", "bust_rate", "Validation Bust Rate"),
-            ("validation_curve_worst_delta.png", "worst_delta", "Validation Worst Delta"),
-        ],
-    )
-
-
 def _lineage_round_row(result: dict) -> dict | None:
     training = result.get("training_summary") or result.get("summary") or []
-    validation = result.get("validation_summary") or []
+    family = result.get("family_summary") or []
     if len(training) < 2:
         return None
     train_base = training[0]
     train_current = training[-1]
-    val_base = validation[0] if len(validation) >= 2 else {}
-    val_current = validation[-1] if len(validation) >= 2 else {}
+    family_current = family[-1] if family else {}
     round_index = int(result.get("round") or 0)
     return {
         "round": round_index,
@@ -1003,12 +1000,12 @@ def _lineage_round_row(result: dict) -> dict | None:
         "training_bust_rate": train_current.get("bust_rate", 0),
         "training_worst_group_delta": train_current.get("worst_group_delta", 0),
         "training_groups_won": train_current.get("groups_won", 0),
-        "validation_base_avg_delta": val_base.get("avg_delta", 0),
-        "validation_candidate_avg_delta": val_current.get("avg_delta", 0),
-        "validation_delta_vs_base": val_current.get("avg_delta", 0) - val_base.get("avg_delta", 0),
-        "validation_win_rate": val_current.get("win_rate", 0),
-        "validation_bust_rate": val_current.get("bust_rate", 0),
-        "validation_worst_delta": val_current.get("worst_delta", 0),
+        "family_base_avg_delta": family_current.get("base_avg_delta", 0),
+        "family_candidate_avg_delta": family_current.get("candidate_avg_delta", 0),
+        "family_delta_vs_base": family_current.get("avg_delta_vs_base", 0),
+        "family_top_half_rate": family_current.get("candidate_top_half_rate", 0),
+        "family_bust_rate": family_current.get("candidate_bust_rate", 0),
+        "family_worst_delta_vs_base": family_current.get("worst_delta_vs_base", 0),
     }
 
 
@@ -1049,7 +1046,7 @@ def _plot_condensed_curves(curve_dir: Path, lineage_rows: list[dict]) -> list[st
     plt.figure(figsize=(max(9, len(labels) * 1.0), 5.2))
     plt.axhline(0, color="black", linewidth=1, alpha=0.45)
     plt.plot(xs, [row["training_delta_vs_base"] for row in lineage_rows], marker="o", linewidth=2, label="training delta vs base")
-    plt.plot(xs, [row["validation_delta_vs_base"] for row in lineage_rows], marker="o", linewidth=2, label="validation delta vs base")
+    plt.plot(xs, [row["family_delta_vs_base"] for row in lineage_rows], marker="o", linewidth=2, label="family delta vs base")
     plt.xticks(xs, labels, rotation=35, ha="right")
     plt.title("Candidate Scoreboard")
     plt.xlabel("Improvement Round")
@@ -1065,8 +1062,8 @@ def _plot_condensed_curves(curve_dir: Path, lineage_rows: list[dict]) -> list[st
     plt.figure(figsize=(max(9, len(labels) * 1.0), 5.2))
     plt.plot(xs, [row["training_top_half_rate"] for row in lineage_rows], marker="o", linewidth=2, label="training top-half")
     plt.plot(xs, [row["training_bust_rate"] for row in lineage_rows], marker="o", linewidth=2, label="training bust")
-    plt.plot(xs, [row["validation_win_rate"] for row in lineage_rows], marker="o", linewidth=2, label="validation win")
-    plt.plot(xs, [row["validation_bust_rate"] for row in lineage_rows], marker="o", linewidth=2, label="validation bust")
+    plt.plot(xs, [row["family_top_half_rate"] for row in lineage_rows], marker="o", linewidth=2, label="family top-half")
+    plt.plot(xs, [row["family_bust_rate"] for row in lineage_rows], marker="o", linewidth=2, label="family bust")
     plt.ylim(-0.05, 1.05)
     plt.xticks(xs, labels, rotation=35, ha="right")
     plt.title("Risk And Validation")
@@ -1075,7 +1072,7 @@ def _plot_condensed_curves(curve_dir: Path, lineage_rows: list[dict]) -> list[st
     plt.grid(True, alpha=0.3)
     plt.legend()
     plt.tight_layout()
-    output = curve_dir / "curve_risk_validation.png"
+    output = curve_dir / "curve_risk.png"
     plt.savefig(output)
     plt.close()
     paths.append(str(output))
@@ -1102,12 +1099,12 @@ def _write_lineage_curve_artifacts(curve_dir: Path, current_result: dict | None 
         "training_bust_rate",
         "training_worst_group_delta",
         "training_groups_won",
-        "validation_base_avg_delta",
-        "validation_candidate_avg_delta",
-        "validation_delta_vs_base",
-        "validation_win_rate",
-        "validation_bust_rate",
-        "validation_worst_delta",
+        "family_base_avg_delta",
+        "family_candidate_avg_delta",
+        "family_delta_vs_base",
+        "family_top_half_rate",
+        "family_bust_rate",
+        "family_worst_delta_vs_base",
     ]
     lineage_csv = curve_dir / "lineage_summary.csv"
     _write_csv(lineage_csv, rows, fields)
@@ -1120,97 +1117,121 @@ def _write_lineage_curve_artifacts(curve_dir: Path, current_result: dict | None 
     }
 
 
-def _run_validation_curve(
+def _family_curve_groups(snapshots: dict[str, dict], base_id: str, group_count: int, seed: int) -> tuple[list[dict], list[str]]:
+    resolved, skipped = _resolve_baseline_opponents(FAMILY_CURVE_OPPONENTS, snapshots, base_id)
+    pool = []
+    seen = set()
+    for path in resolved:
+        bot_path = Path(path)
+        bot_id = bot_path.parent.name if bot_path.name == "bot.py" else bot_path.name
+        if bot_id in seen or _is_excluded_curve_training_bot(bot_id):
+            continue
+        seen.add(bot_id)
+        pool.append({"bot_id": bot_id, "path": path})
+    if len(pool) < 4:
+        raise RuntimeError(f"Family curve needs at least 4 heuristic opponents, found {len(pool)}")
+
+    groups = []
+    for group_index in range(group_count):
+        shuffled = list(pool)
+        random.Random(f"family:{seed}:{group_index}").shuffle(shuffled)
+        groups.append(
+            {
+                "group_id": f"family_{group_index + 1:02d}",
+                "opponents": shuffled[:4],
+            }
+        )
+    return groups, skipped
+
+
+def _run_family_curve(
     run_dir: Path,
+    base_path: str,
     candidates: list[dict],
+    groups: list[dict],
     hands: int,
     iterations: int,
     seed: int,
     round_index: int,
 ) -> tuple[list[dict], list[dict]]:
     rows = []
-    if len(candidates) < 2:
-        return rows, [
-            {
-                "candidate_id": candidate["candidate_id"],
-                "label": candidate["label"],
-                "order": candidate["order"],
-                "matches": 0,
-                "avg_delta": 0,
-                "median_delta": 0,
-                "worst_delta": 0,
-                "best_delta": 0,
-                "avg_place": 0,
-                "win_rate": 0,
-                "bust_rate": 0,
-                "opponents_beaten": 0,
-            }
-            for candidate in candidates
-        ]
-
-    for candidate_index, candidate in enumerate(candidates):
-        for opponent_index, opponent in enumerate(candidates):
-            if candidate_index == opponent_index:
-                continue
+    candidate_entries = [candidate for candidate in candidates if candidate["candidate_id"] != "base"]
+    for candidate_index, candidate in enumerate(candidate_entries, start=1):
+        _log(f"Family curve candidate {candidate_index}/{len(candidate_entries)}: {candidate['label']}")
+        for group_index, group in enumerate(groups):
             for iteration in range(iterations):
-                match_seed = seed + 50_000_000 + candidate_index * 1_000_000 + opponent_index * 1_000 + iteration
-                candidate_bot_id = f"candidate_{candidate_index:02d}"
-                opponent_bot_id = f"opponent_{opponent_index:02d}"
+                match_seed = seed + 50_000_000 + candidate_index * 1_000_000 + group_index * 1_000 + iteration
+                candidate_bot_id = f"family_candidate_{candidate_index:02d}"
+                base_bot_id = "family_original_base"
+                table = {
+                    base_bot_id: base_path,
+                    candidate_bot_id: candidate["path"],
+                }
+                for opponent in group["opponents"]:
+                    bot_id = opponent["bot_id"]
+                    if bot_id in table:
+                        bot_id = f"{bot_id}_opponent"
+                    table[bot_id] = opponent["path"]
                 match = run_match(
-                    f"valcurve_{run_dir.name}_r{round_index:02d}_c{candidate_index:02d}_o{opponent_index:02d}_i{iteration:02d}",
-                    {
-                        candidate_bot_id: candidate["path"],
-                        opponent_bot_id: opponent["path"],
-                    },
+                    f"familycurve_{run_dir.name}_r{round_index:02d}_c{candidate_index:02d}_g{group_index:02d}_i{iteration:02d}",
+                    table,
                     n_hands=hands,
                     seed=match_seed,
                 )
-                place = _rank_for_match(match, candidate_bot_id)
+                candidate_delta = match["chip_delta"][candidate_bot_id]
+                base_delta = match["chip_delta"][base_bot_id]
                 rows.append(
                     {
                         "round": round_index,
                         "candidate_id": candidate["candidate_id"],
                         "candidate_label": candidate["label"],
                         "candidate_order": candidate["order"],
-                        "opponent_id": opponent["candidate_id"],
-                        "opponent_label": opponent["label"],
+                        "group_id": group["group_id"],
                         "iteration": iteration,
                         "seed": match_seed,
                         "hands": match["n_hands"],
-                        "chip_delta": match["chip_delta"][candidate_bot_id],
-                        "place": place,
-                        "win": place == 1,
-                        "busted": match["final_stacks"][candidate_bot_id] <= 0,
-                        "final_stack": match["final_stacks"][candidate_bot_id],
+                        "candidate_delta": candidate_delta,
+                        "base_delta": base_delta,
+                        "delta_vs_base": candidate_delta - base_delta,
+                        "candidate_place": _rank_for_match(match, candidate_bot_id),
+                        "base_place": _rank_for_match(match, base_bot_id),
+                        "candidate_top_half": _top_half_for_match(match, candidate_bot_id),
+                        "base_top_half": _top_half_for_match(match, base_bot_id),
+                        "candidate_busted": match["final_stacks"][candidate_bot_id] <= 0,
+                        "base_busted": match["final_stacks"][base_bot_id] <= 0,
+                        "candidate_final_stack": match["final_stacks"][candidate_bot_id],
+                        "base_final_stack": match["final_stacks"][base_bot_id],
+                        "opponent_ids": "|".join(opponent["bot_id"] for opponent in group["opponents"]),
                         "duration_s": match["duration_s"],
                     }
                 )
 
     summaries = []
-    for candidate in candidates:
+    for candidate in candidate_entries:
         candidate_rows = [row for row in rows if row["candidate_id"] == candidate["candidate_id"]]
-        deltas = [float(row["chip_delta"]) for row in candidate_rows]
-        places = [float(row["place"]) for row in candidate_rows]
-        wins = [1.0 if row["win"] else 0.0 for row in candidate_rows]
-        busts = [1.0 if row["busted"] else 0.0 for row in candidate_rows]
-        by_opponent = {}
-        for row in candidate_rows:
-            by_opponent.setdefault(row["opponent_id"], []).append(float(row["chip_delta"]))
-        opponents_beaten = sum(1 for values in by_opponent.values() if _mean(values) > 0)
+        candidate_deltas = [float(row["candidate_delta"]) for row in candidate_rows]
+        base_deltas = [float(row["base_delta"]) for row in candidate_rows]
+        deltas_vs_base = [float(row["delta_vs_base"]) for row in candidate_rows]
+        candidate_places = [float(row["candidate_place"]) for row in candidate_rows]
+        base_places = [float(row["base_place"]) for row in candidate_rows]
         summaries.append(
             {
                 "candidate_id": candidate["candidate_id"],
                 "label": candidate["label"],
                 "order": candidate["order"],
                 "matches": len(candidate_rows),
-                "avg_delta": round(_mean(deltas), 3),
-                "median_delta": round(_median(deltas), 3),
-                "worst_delta": round(min(deltas), 3) if deltas else 0,
-                "best_delta": round(max(deltas), 3) if deltas else 0,
-                "avg_place": round(_mean(places), 3),
-                "win_rate": round(_mean(wins), 3),
-                "bust_rate": round(_mean(busts), 3),
-                "opponents_beaten": opponents_beaten,
+                "candidate_avg_delta": round(_mean(candidate_deltas), 3),
+                "base_avg_delta": round(_mean(base_deltas), 3),
+                "avg_delta_vs_base": round(_mean(deltas_vs_base), 3),
+                "median_delta_vs_base": round(_median(deltas_vs_base), 3),
+                "worst_delta_vs_base": round(min(deltas_vs_base), 3) if deltas_vs_base else 0,
+                "best_delta_vs_base": round(max(deltas_vs_base), 3) if deltas_vs_base else 0,
+                "candidate_avg_place": round(_mean(candidate_places), 3),
+                "base_avg_place": round(_mean(base_places), 3),
+                "candidate_top_half_rate": round(_mean([1.0 if row["candidate_top_half"] else 0.0 for row in candidate_rows]), 3),
+                "base_top_half_rate": round(_mean([1.0 if row["base_top_half"] else 0.0 for row in candidate_rows]), 3),
+                "candidate_bust_rate": round(_mean([1.0 if row["candidate_busted"] else 0.0 for row in candidate_rows]), 3),
+                "base_bust_rate": round(_mean([1.0 if row["base_busted"] else 0.0 for row in candidate_rows]), 3),
             }
         )
     return rows, summaries
@@ -1226,15 +1247,14 @@ def _curve_summary_text(curve_result: dict | None) -> str:
     current = summaries[-1]
     delta = current.get("avg_delta", 0) - base.get("avg_delta", 0)
     bust_change = current.get("bust_rate", 0) - base.get("bust_rate", 0)
-    validation = curve_result.get("validation_summary") or []
-    validation_bits = ""
-    if validation:
-        val_base = validation[0]
-        val_current = validation[-1]
-        validation_bits = (
-            f"; validation_current_avg_delta={val_current.get('avg_delta'):+.1f}; "
-            f"validation_delta_vs_base={val_current.get('avg_delta', 0) - val_base.get('avg_delta', 0):+.1f}; "
-            f"validation_win_rate={val_current.get('win_rate'):.2f}"
+    family = curve_result.get("family_summary") or []
+    family_bits = ""
+    if family:
+        family_current = family[-1]
+        family_bits = (
+            f"; family_delta_vs_base={family_current.get('avg_delta_vs_base'):+.1f}; "
+            f"family_top_half={family_current.get('candidate_top_half_rate'):.2f}; "
+            f"family_bust={family_current.get('candidate_bust_rate'):.2f}"
         )
     return (
         f"curve current_avg_delta={current.get('avg_delta'):+.1f}; "
@@ -1244,7 +1264,7 @@ def _curve_summary_text(curve_result: dict | None) -> str:
         f"top_half={current.get('top_half_rate'):.2f}; "
         f"bust_change={bust_change:+.2f}; "
         f"groups_won={current.get('groups_won')}"
-        f"{validation_bits}"
+        f"{family_bits}"
     )
 
 
@@ -1260,6 +1280,7 @@ def _run_curve_benchmark(
     curve_dir = run_dir / "curve_benchmark"
     curve_dir.mkdir(parents=True, exist_ok=True)
     groups = _curve_training_groups(snapshots, base_id, args.curve_groups, args.curve_seed)
+    family_groups, family_skipped = _family_curve_groups(snapshots, base_id, args.curve_groups, args.curve_seed)
     candidates = _curve_candidate_entries(base_id, base_path, current_candidate_dir, args.curve_recent_candidates)
     rows = []
 
@@ -1274,6 +1295,18 @@ def _run_curve_benchmark(
         "groups": groups,
     }
     (curve_dir / "training_groups.json").write_text(json.dumps(groups_record, indent=2) + "\n")
+    family_record = {
+        "round": round_index,
+        "group_count": args.curve_groups,
+        "hands": args.curve_hands,
+        "iterations": args.curve_iterations,
+        "seed": args.curve_seed,
+        "description": "Each 6-player table is original base + one candidate + 4 heuristic-family opponents.",
+        "skipped_family_opponents": family_skipped,
+        "candidates": [candidate for candidate in candidates if candidate["candidate_id"] != "base"],
+        "groups": family_groups,
+    }
+    (curve_dir / "family_groups.json").write_text(json.dumps(family_record, indent=2) + "\n")
 
     for candidate_index, candidate in enumerate(candidates):
         _log(f"Curve benchmark candidate {candidate_index + 1}/{len(candidates)}: {candidate['label']}")
@@ -1345,42 +1378,54 @@ def _run_curve_benchmark(
         "bust_rate",
         "groups_won",
     ]
-    validation_fields = [
+    family_fields = [
         "round",
         "candidate_id",
         "candidate_label",
         "candidate_order",
-        "opponent_id",
-        "opponent_label",
+        "group_id",
         "iteration",
         "seed",
         "hands",
-        "chip_delta",
-        "place",
-        "win",
-        "busted",
-        "final_stack",
+        "candidate_delta",
+        "base_delta",
+        "delta_vs_base",
+        "candidate_place",
+        "base_place",
+        "candidate_top_half",
+        "base_top_half",
+        "candidate_busted",
+        "base_busted",
+        "candidate_final_stack",
+        "base_final_stack",
+        "opponent_ids",
         "duration_s",
     ]
-    validation_summary_fields = [
+    family_summary_fields = [
         "candidate_id",
         "label",
         "order",
         "matches",
-        "avg_delta",
-        "median_delta",
-        "worst_delta",
-        "best_delta",
-        "avg_place",
-        "win_rate",
-        "bust_rate",
-        "opponents_beaten",
+        "candidate_avg_delta",
+        "base_avg_delta",
+        "avg_delta_vs_base",
+        "median_delta_vs_base",
+        "worst_delta_vs_base",
+        "best_delta_vs_base",
+        "candidate_avg_place",
+        "base_avg_place",
+        "candidate_top_half_rate",
+        "base_top_half_rate",
+        "candidate_bust_rate",
+        "base_bust_rate",
     ]
     summaries = _summarize_curve_rows(rows, candidates)
-    _log("Running validation curve across recent candidate lineage")
-    validation_rows, validation_summaries = _run_validation_curve(
+    _log("Running family curve: original base + candidate + 4 heuristic opponents")
+    family_rows, family_summaries = _run_family_curve(
         run_dir=run_dir,
+        base_path=base_path,
         candidates=candidates,
+        groups=family_groups,
         hands=args.curve_hands,
         iterations=args.curve_iterations,
         seed=args.curve_seed,
@@ -1388,43 +1433,31 @@ def _run_curve_benchmark(
     )
     _write_csv(curve_dir / "training_curve.csv", rows, curve_fields)
     _write_csv(curve_dir / "training_summary.csv", summaries, summary_fields)
-    _write_csv(curve_dir / "validation_curve.csv", validation_rows, validation_fields)
-    _write_csv(curve_dir / "validation_summary.csv", validation_summaries, validation_summary_fields)
-    validation_record = {
-        "round": round_index,
-        "hands": args.curve_hands,
-        "iterations": args.curve_iterations,
-        "seed": args.curve_seed,
-        "candidates": candidates,
-        "description": "Each candidate plays heads-up against every other candidate in the lineage.",
-    }
-    (curve_dir / "validation_groups.json").write_text(json.dumps(validation_record, indent=2) + "\n")
+    _write_csv(curve_dir / "family_curve.csv", family_rows, family_fields)
+    _write_csv(curve_dir / "family_summary.csv", family_summaries, family_summary_fields)
     result = {
         "round": round_index,
         "curve_dir": str(curve_dir),
         "training_curve_csv": str(curve_dir / "training_curve.csv"),
         "training_summary_csv": str(curve_dir / "training_summary.csv"),
         "training_groups_json": str(curve_dir / "training_groups.json"),
-        "validation_curve_csv": str(curve_dir / "validation_curve.csv"),
-        "validation_summary_csv": str(curve_dir / "validation_summary.csv"),
-        "validation_groups_json": str(curve_dir / "validation_groups.json"),
+        "family_curve_csv": str(curve_dir / "family_curve.csv"),
+        "family_summary_csv": str(curve_dir / "family_summary.csv"),
+        "family_groups_json": str(curve_dir / "family_groups.json"),
         "training_plots": [],
-        "validation_plots": [],
         "detailed_plots": [],
         "main_plots": [],
         "plots": [],
         "summary": summaries,
         "training_summary": summaries,
-        "validation_summary": validation_summaries,
+        "family_summary": family_summaries,
     }
     lineage_artifacts = _write_lineage_curve_artifacts(curve_dir, result)
     result.update(lineage_artifacts)
     if getattr(args, "curve_detailed_plots", False):
         training_plot_paths = _plot_training_curve(curve_dir, summaries)
-        validation_plot_paths = _plot_validation_curve(curve_dir, validation_summaries)
         result["training_plots"] = training_plot_paths
-        result["validation_plots"] = validation_plot_paths
-        result["detailed_plots"] = training_plot_paths + validation_plot_paths
+        result["detailed_plots"] = training_plot_paths
     result["plots"] = result.get("main_plots", []) + result.get("detailed_plots", [])
     (curve_dir / "curve_summary.json").write_text(json.dumps(result, indent=2) + "\n")
     return result

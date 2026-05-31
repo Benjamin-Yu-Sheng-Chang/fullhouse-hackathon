@@ -98,18 +98,22 @@ Training curve:
   default, because they are better used as reference/selection opponents than
   as training-curve anchors.
 
-Validation curve:
+Family curve:
 
-- Each lineage candidate plays heads-up against the other lineage candidates.
-- This helps detect overfitting to fixed baseline opponents.
+- Each lineage candidate plays a 6-player table with the original base bot and
+  4 sampled heuristic-family opponents.
+- The key metric is candidate chip delta minus original-base chip delta in the
+  same table. This keeps the diagnostic aligned with the 6-player competition
+  format.
 
-Curve artifacts include CSV, JSON, and two primary PNG files:
+Curve artifacts include compact CSV, JSON, and two primary PNG files:
 
-- `curve_scoreboard.png`: training and validation chip-delta vs original base.
-- `curve_risk_validation.png`: top-half, win, and bust-rate trends.
+- `curve_scoreboard.png`: training and family chip-delta vs original base.
+- `curve_risk.png`: top-half and bust-rate trends.
 
-Detailed per-metric PNGs are optional debugging output. Curve metrics are
-diagnostic and prompt feedback only; staged selection still decides acceptance.
+Detailed per-metric training PNGs are optional debugging output. Curve metrics
+are diagnostic and prompt feedback only; staged selection still decides
+acceptance.
 
 ## Strategy Guidance
 

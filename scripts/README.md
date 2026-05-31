@@ -101,11 +101,11 @@ CURVE_BENCHMARK=1 CURVE_HANDS=400 bash scripts/llm_workflows.sh branch-value hl_
 
 This writes `curve_benchmark/` artifacts inside the LLM run, including
 `training_curve.csv`, `training_summary.csv`, `training_groups.json`,
-`validation_curve.csv`, `validation_summary.csv`, `validation_groups.json`, and
-two primary PNG plots when `matplotlib` is installed:
+`family_curve.csv`, `family_summary.csv`, `family_groups.json`, and two primary
+PNG plots when `matplotlib` is installed:
 
 - `curve_scoreboard.png`
-- `curve_risk_validation.png`
+- `curve_risk.png`
 
 Detailed per-metric PNGs are only written with `--curve-detailed-plots`, or
 `CURVE_DETAILED_PLOTS=1` when using `scripts/llm_workflows.sh`. The curve is
