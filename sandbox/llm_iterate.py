@@ -48,7 +48,6 @@ DEFAULT_GOAL = (
 
 ELIMINATION_BASELINES = ["mathematician", "ref_bot_2", "aggressor", "shark"]
 FULL_SELECTION_BASELINES = [
-    "template",
     "mathematician",
     "ref_bot_2",
     "aggressor",
@@ -58,6 +57,8 @@ FULL_SELECTION_BASELINES = [
     "trap_steal",
     "short_stack_survivor",
 ]
+MAX_TABLE_BOTS = 9
+CURVE_EXCLUDED_TRAINING_PREFIXES = ("shark", "ref_bot_2")
 FINALIST_BASELINES = [
     "equity_guard",
     "position_bully",
@@ -577,6 +578,18 @@ def _opponent_names(opponents: list[str]) -> str:
     return ", ".join(names or ["<none>"])
 
 
+def _cap_field_opponents(opponents: list[str], skipped: list[dict], gate: str) -> list[str]:
+    max_opponents = MAX_TABLE_BOTS - 1
+    if len(opponents) <= max_opponents:
+        return opponents
+    for path_text in opponents[max_opponents:]:
+        skipped.append({
+            "token": path_text,
+            "reason": f"{gate} field capped at {max_opponents} opponents because match engine supports at most {MAX_TABLE_BOTS} total bots",
+        })
+    return opponents[:max_opponents]
+
+
 def _find_lineage_candidates(base_path: str, current_candidate_dir: Path) -> list[str]:
     lineage = []
     try:
@@ -700,6 +713,7 @@ def _run_staged_selection(
     full_tokens = args.selection_baselines or FULL_SELECTION_BASELINES
     full_opponents, skipped = _resolve_baseline_opponents(full_tokens, snapshots, base_id)
     result["skipped_baselines"].extend(skipped)
+    full_opponents = _cap_field_opponents(full_opponents, result["skipped_baselines"], "full selection")
     result["baseline_count"] = 1 + len(full_opponents)
     _log("Full selection benchmark against bots: " + _opponent_names(full_opponents))
     full = _run_benchmark(
@@ -728,6 +742,7 @@ def _run_staged_selection(
         lineage_opponents = _find_lineage_candidates(base_path, candidate_dir)
         finalist_opponents.extend(path for path in lineage_opponents if path not in finalist_opponents)
         result["skipped_baselines"].extend(skipped)
+        finalist_opponents = _cap_field_opponents(finalist_opponents, result["skipped_baselines"], "finalist")
         _log("Finalist benchmark against bots: " + _opponent_names(finalist_opponents))
         finalist = _run_benchmark(
             base_path=base_path,
@@ -754,19 +769,27 @@ def _run_staged_selection(
     return result
 
 
-def _curve_opponent_pool(snapshots: dict[str, dict], base_id: str) -> list[dict]:
+def _is_excluded_curve_training_bot(bot_id: str) -> bool:
+    return any(bot_id == prefix or bot_id.startswith(prefix + "_") for prefix in CURVE_EXCLUDED_TRAINING_PREFIXES)
+
+
+def _curve_opponent_pool(snapshots: dict[str, dict], base_id: str) -> tuple[list[dict], list[str]]:
     pool = []
+    excluded = []
     for bot_id, snapshot in sorted(snapshots.items()):
         if bot_id == base_id:
+            continue
+        if _is_excluded_curve_training_bot(bot_id):
+            excluded.append(bot_id)
             continue
         bot_dir = snapshot.get("bot_dir")
         if bot_dir and Path(bot_dir).exists():
             pool.append({"bot_id": bot_id, "path": bot_dir})
-    return pool
+    return pool, excluded
 
 
 def _curve_training_groups(snapshots: dict[str, dict], base_id: str, group_count: int, seed: int) -> list[dict]:
-    pool = _curve_opponent_pool(snapshots, base_id)
+    pool, _excluded = _curve_opponent_pool(snapshots, base_id)
     if len(pool) < 5:
         raise RuntimeError(f"Curve benchmark needs at least 5 baseline opponents, found {len(pool)}")
     groups = []
@@ -781,6 +804,11 @@ def _curve_training_groups(snapshots: dict[str, dict], base_id: str, group_count
             }
         )
     return groups
+
+
+def _curve_excluded_training_bots(snapshots: dict[str, dict], base_id: str) -> list[str]:
+    _pool, excluded = _curve_opponent_pool(snapshots, base_id)
+    return excluded
 
 
 def _curve_candidate_label(path_text: str, fallback: str) -> str:
@@ -1241,6 +1269,7 @@ def _run_curve_benchmark(
         "hands": args.curve_hands,
         "iterations": args.curve_iterations,
         "seed": args.curve_seed,
+        "excluded_training_opponents": _curve_excluded_training_bots(snapshots, base_id),
         "candidates": candidates,
         "groups": groups,
     }

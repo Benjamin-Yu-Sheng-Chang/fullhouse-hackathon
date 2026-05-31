@@ -94,6 +94,9 @@ Training curve:
 - Evaluates base, recent lineage candidates, and current candidate.
 - Each candidate plays 20 deterministic 6-player tables by default.
 - Each table is candidate plus 5 sampled baseline opponents.
+- `shark` and `ref_bot_2` are excluded from sampled training groups by
+  default, because they are better used as reference/selection opponents than
+  as training-curve anchors.
 
 Validation curve:
 

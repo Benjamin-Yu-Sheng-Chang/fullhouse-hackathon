@@ -21,3 +21,8 @@ node_modules/
 runs/*
 hl_runs/*
 !hl_runs/.gitkeep
+
+/CFR/
+bots/cfr/data/*.npz
+bots/cfr/dist/
+bots/cfr/experiments/

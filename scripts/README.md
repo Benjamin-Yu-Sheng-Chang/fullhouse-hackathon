@@ -111,6 +111,7 @@ Detailed per-metric PNGs are only written with `--curve-detailed-plots`, or
 `CURVE_DETAILED_PLOTS=1` when using `scripts/llm_workflows.sh`. The curve is
 diagnostic: it is saved and fed back to DeepSeek on failed candidates, but
 staged selection still decides acceptance.
+Training groups exclude `shark` and `ref_bot_2` by default.
 
 ## Bot Strategy Comments
 
