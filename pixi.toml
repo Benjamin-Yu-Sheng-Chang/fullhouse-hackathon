@@ -13,6 +13,7 @@ python = "3.11.*"
 setuptools = ">=82.0.1,<83"
 wheel = ">=0.47.0,<0.48"
 pip = ">=26.1.1,<27"
+matplotlib = ">=3.10.9,<4"
 
 [pypi-dependencies]
 eval7 = "==0.1.10"

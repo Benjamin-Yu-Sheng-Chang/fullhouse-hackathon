@@ -1,0 +1,119 @@
+CURVE_BENCHMARK=1 \
+python3 sandbox/llm_iterate.py \
+  --base short_stack_survivor:v1 \
+  --new-version v2 \
+  --goal "Iteratively improve robust 6-player performance. Preserve short-stack survival, avoid higher bust rate, and look for value aggression that improves the 20-group training curve without weakening sibling validation." \
+  --metrics-run runs/bench_generated_10x100 \
+  --improvement-rounds 10 \
+  --llm-attempts 2 \
+  --selection-profile staged \
+  --elimination-iterations 2 \
+  --elimination-hands 60 \
+  --full-iterations 4 \
+  --full-hands 100 \
+  --skip-finalist-check \
+  --curve-benchmark \
+  --curve-groups 20 \
+  --curve-hands 400 \
+  --curve-iterations 1 \
+  --curve-recent-candidates 8 \
+  --seed 8100 \
+  --curve-seed 9100 \
+  --run-name hl_10_candidate_curve_test
+
+  Ref Bot / Pot Odds
+
+Mathematician
+
+python3 sandbox/llm_iterate.py \
+  --base mathematician \
+  --new-type mathematician_llm \
+  --new-version v1 \
+  --goal "Improve the mathematician baseline into a stronger probability-driven 6-player bot. Keep the core identity as math-first and odds-aware, but use the exact Fullhouse state schema: your_cards and community_cards, never hand, your_hand, or board. Add calibrated aggression with strong made hands, safer multiway calling, position-aware opening, and short-stack protection. Do not copy other bots wholesale; make a distinct mathematical strategy." \
+  --metrics-run runs/bench_generated_10x100 \
+  --improvement-rounds 10 \
+  --llm-attempts 4 \
+  --selection-profile staged \
+  --elimination-iterations 2 \
+  --elimination-hands 60 \
+  --full-iterations 4 \
+  --full-hands 100 \
+  --skip-finalist-check \
+  --curve-benchmark \
+  --curve-groups 20 \
+  --curve-hands 400 \
+  --curve-iterations 1 \
+  --curve-recent-candidates 8 \
+  --seed 8300 \
+  --curve-seed 9300 \
+  --run-name hl_mathematician_10_schema_doc
+
+Shark
+
+python3 sandbox/llm_iterate.py \
+  --base shark \
+  --new-type shark_llm \
+  --new-version v1 \
+  --goal "Improve the shark baseline for robust 6-player 400-hand play. Keep it opportunistic and exploitative, but reduce spewy aggression, improve fold discipline when facing large bets, add value-heavy raises with strong hands, and avoid high bust-rate lines. The strategy should be distinct from existing heuristic bots and clearly documented in STRATEGY OVERVIEW." \
+  --metrics-run runs/bench_generated_10x100 \
+  --improvement-rounds 10 \
+  --llm-attempts 2 \
+  --selection-profile staged \
+  --elimination-iterations 2 \
+  --elimination-hands 60 \
+  --full-iterations 4 \
+  --full-hands 100 \
+  --skip-finalist-check \
+  --curve-benchmark \
+  --curve-groups 20 \
+  --curve-hands 400 \
+  --curve-iterations 1 \
+  --seed 8400 \
+  --curve-seed 9400 \
+  --run-name hl_shark_10
+Aggressor
+
+python3 sandbox/llm_iterate.py \
+  --base aggressor \
+  --new-type aggressor_llm \
+  --new-version v1 \
+  --goal "Improve the aggressor baseline without removing its aggressive identity. Convert blind aggression into selective pressure: late-position steals, continuation bets when credible, value raises with strong hands, and emergency fold discipline versus oversized raises. Optimize for 6-player 400-hand robustness and lower bust rate." \
+  --metrics-run runs/bench_generated_10x100 \
+  --improvement-rounds 10 \
+  --llm-attempts 2 \
+  --selection-profile staged \
+  --elimination-iterations 2 \
+  --elimination-hands 60 \
+  --full-iterations 4 \
+  --full-hands 100 \
+  --skip-finalist-check \
+  --curve-benchmark \
+  --curve-groups 20 \
+  --curve-hands 400 \
+  --curve-iterations 1 \
+  --seed 8500 \
+  --curve-seed 9500 \
+  --run-name hl_aggressor_10
+Template
+
+python3 sandbox/llm_iterate.py \
+  --base template \
+  --new-type template_llm \
+  --new-version v1 \
+  --goal "Turn the minimal template baseline into a simple but competitive 6-player bot. Add readable fundamentals: tight preflop ranges, pot-odds calls, value betting with strong hands, cautious bluffing in late position, and short-stack survival. Keep the bot small and interpretable; do not copy other bots wholesale." \
+  --metrics-run runs/bench_generated_10x100 \
+  --improvement-rounds 10 \
+  --llm-attempts 2 \
+  --selection-profile staged \
+  --elimination-iterations 2 \
+  --elimination-hands 60 \
+  --full-iterations 4 \
+  --full-hands 100 \
+  --skip-finalist-check \
+  --curve-benchmark \
+  --curve-groups 20 \
+  --curve-hands 400 \
+  --curve-iterations 1 \
+  --seed 8600 \
+  --curve-seed 9600 \
+  --run-name hl_template_10

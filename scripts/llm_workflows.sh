@@ -19,7 +19,7 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
 
-BASE_DEFAULT="${BASE:-short_stack_survivor:v1}"
+BASE_DEFAULT="${BASE:-short_stack_survivor}"
 METRICS_DEFAULT="${METRICS:-runs/bench_generated_10x100}"
 ITER_SMOKE="${ITER_SMOKE:-1}"
 HANDS_SMOKE="${HANDS_SMOKE:-20}"
@@ -27,6 +27,35 @@ ITER_BRANCH="${ITER_BRANCH:-4}"
 HANDS_BRANCH="${HANDS_BRANCH:-80}"
 ITER_STRONG="${ITER_STRONG:-12}"
 HANDS_STRONG="${HANDS_STRONG:-120}"
+ELIM_ITER_SMOKE="${ELIM_ITER_SMOKE:-1}"
+ELIM_HANDS_SMOKE="${ELIM_HANDS_SMOKE:-20}"
+FULL_ITER_SMOKE="${FULL_ITER_SMOKE:-1}"
+FULL_HANDS_SMOKE="${FULL_HANDS_SMOKE:-20}"
+ELIM_ITER_BRANCH="${ELIM_ITER_BRANCH:-3}"
+ELIM_HANDS_BRANCH="${ELIM_HANDS_BRANCH:-60}"
+FULL_ITER_BRANCH="${FULL_ITER_BRANCH:-8}"
+FULL_HANDS_BRANCH="${FULL_HANDS_BRANCH:-100}"
+CURVE_BENCHMARK="${CURVE_BENCHMARK:-0}"
+CURVE_GROUPS="${CURVE_GROUPS:-20}"
+CURVE_HANDS="${CURVE_HANDS:-400}"
+CURVE_ITERATIONS="${CURVE_ITERATIONS:-1}"
+CURVE_SEED="${CURVE_SEED:-9000}"
+CURVE_RECENT_CANDIDATES="${CURVE_RECENT_CANDIDATES:-8}"
+CURVE_DETAILED_PLOTS="${CURVE_DETAILED_PLOTS:-0}"
+CURVE_ARGS=()
+if [[ "$CURVE_BENCHMARK" == "1" ]]; then
+  CURVE_ARGS=(
+    --curve-benchmark
+    --curve-groups "$CURVE_GROUPS"
+    --curve-hands "$CURVE_HANDS"
+    --curve-iterations "$CURVE_ITERATIONS"
+    --curve-seed "$CURVE_SEED"
+    --curve-recent-candidates "$CURVE_RECENT_CANDIDATES"
+  )
+  if [[ "$CURVE_DETAILED_PLOTS" == "1" ]]; then
+    CURVE_ARGS+=(--curve-detailed-plots)
+  fi
+fi
 
 usage() {
   cat <<'EOF'
@@ -63,11 +92,15 @@ LLM Bot Workflow Commands
     Compare a run's baseline and latest candidate directly in a small bake-off.
 
 Environment overrides:
-  BASE=short_stack_survivor:v1
+  BASE=short_stack_survivor
   METRICS=runs/bench_generated_10x100
   ITER_SMOKE=1 HANDS_SMOKE=20
   ITER_BRANCH=4 HANDS_BRANCH=80
   ITER_STRONG=12 HANDS_STRONG=120
+  ELIM_ITER_BRANCH=3 ELIM_HANDS_BRANCH=60
+  FULL_ITER_BRANCH=8 FULL_HANDS_BRANCH=100
+  CURVE_BENCHMARK=1 CURVE_GROUPS=20 CURVE_HANDS=400 CURVE_ITERATIONS=1
+  CURVE_DETAILED_PLOTS=1
 EOF
 }
 
@@ -112,8 +145,23 @@ PY
   echo "$base"
 }
 
+selection_metrics_args() {
+  local run="$1"
+  local newest
+  newest="$(find "$run/artifacts/selection" -name 'selection_round_*.json' -print 2>/dev/null | sort | tail -1 || true)"
+  if [[ -n "$newest" ]]; then
+    printf '%s\n' --metrics-run "$newest"
+  fi
+  if [[ -f "$run/selection_round_01.json" ]]; then
+    printf '%s\n' --metrics-run "$run/selection_round_01.json"
+  fi
+  if [[ -f "$run/benchmark_round_01.json" ]]; then
+    printf '%s\n' --metrics-run "$run/benchmark_round_01.json"
+  fi
+}
+
 run_name_suffix() {
-  date -u +"%Y%m%dT%H%M%SZ"
+  date -u +"%y%m%d_%H%M%S"
 }
 
 llm_iterate() {
@@ -134,77 +182,108 @@ case "$cmd" in
       --metrics-run "$METRICS_DEFAULT" \
       --benchmark-iterations "$ITER_SMOKE" \
       --hands "$HANDS_SMOKE" \
+      --selection-profile staged \
+      --elimination-iterations "$ELIM_ITER_SMOKE" \
+      --elimination-hands "$ELIM_HANDS_SMOKE" \
+      --full-iterations "$FULL_ITER_SMOKE" \
+      --full-hands "$FULL_HANDS_SMOKE" \
+      "${CURVE_ARGS[@]}" \
       --seed 6100 \
       --max-bad-setups 4 \
-      --run-name "hl_smoke_$(run_name_suffix)"
+      --skip-finalist-check \
+      --run-name "hl_smoke"
     ;;
 
   branch-value)
     run="${2:-}"
     require_run "$run"
     base="$(candidate_latest "$run")"
+    mapfile -t metric_args < <(selection_metrics_args "$run")
     llm_iterate \
       --base "$base" \
       --new-type short_stack_survivor \
       --new-version "v_value_$(run_name_suffix)" \
       --goal "Improve value betting and passive/reference-table performance. Keep short-stack survival unchanged and do not increase bust rate." \
-      --metrics-run "$run/benchmark_round_01.json" \
+      "${metric_args[@]}" \
       --benchmark-iterations "$ITER_BRANCH" \
       --hands "$HANDS_BRANCH" \
+      --selection-profile staged \
+      --elimination-iterations "$ELIM_ITER_BRANCH" \
+      --elimination-hands "$ELIM_HANDS_BRANCH" \
+      --full-iterations "$FULL_ITER_BRANCH" \
+      --full-hands "$FULL_HANDS_BRANCH" \
+      "${CURVE_ARGS[@]}" \
       --seed 6200 \
-      --max-bad-setups 4 \
-      --run-name "hl_branch_value_$(run_name_suffix)"
+      --run-name "hl_branch_value"
     ;;
 
   branch-anti-aggro)
     run="${2:-}"
     require_run "$run"
     base="$(candidate_latest "$run")"
+    mapfile -t metric_args < <(selection_metrics_args "$run")
     llm_iterate \
       --base "$base" \
       --new-type short_stack_survivor \
       --new-version "v_anti_aggro_$(run_name_suffix)" \
       --goal "Improve aggressive-table performance. Tighten against repeated raises, reduce marginal calls, and preserve zero or near-zero bust regression." \
-      --metrics-run "$run/benchmark_round_01.json" \
+      "${metric_args[@]}" \
       --benchmark-iterations "$ITER_BRANCH" \
       --hands "$HANDS_BRANCH" \
+      --selection-profile staged \
+      --elimination-iterations "$ELIM_ITER_BRANCH" \
+      --elimination-hands "$ELIM_HANDS_BRANCH" \
+      --full-iterations "$FULL_ITER_BRANCH" \
+      --full-hands "$FULL_HANDS_BRANCH" \
+      "${CURVE_ARGS[@]}" \
       --seed 6300 \
-      --max-bad-setups 4 \
-      --run-name "hl_branch_anti_aggro_$(run_name_suffix)"
+      --run-name "hl_branch_anti_aggro"
     ;;
 
   branch-survival)
     run="${2:-}"
     require_run "$run"
     base="$(candidate_latest "$run")"
+    mapfile -t metric_args < <(selection_metrics_args "$run")
     llm_iterate \
       --base "$base" \
       --new-type short_stack_survivor \
       --new-version "v_survival_$(run_name_suffix)" \
       --goal "Reduce bust rate and worst-match downside. Prefer robust top-half finishes over high-variance chip spikes." \
-      --metrics-run "$run/benchmark_round_01.json" \
+      "${metric_args[@]}" \
       --benchmark-iterations "$ITER_BRANCH" \
       --hands "$HANDS_BRANCH" \
+      --selection-profile staged \
+      --elimination-iterations "$ELIM_ITER_BRANCH" \
+      --elimination-hands "$ELIM_HANDS_BRANCH" \
+      --full-iterations "$FULL_ITER_BRANCH" \
+      --full-hands "$FULL_HANDS_BRANCH" \
+      "${CURVE_ARGS[@]}" \
       --seed 6400 \
-      --max-bad-setups 4 \
-      --run-name "hl_branch_survival_$(run_name_suffix)"
+      --run-name "hl_branch_survival"
     ;;
 
   branch-position)
     run="${2:-}"
     require_run "$run"
     base="$(candidate_latest "$run")"
+    mapfile -t metric_args < <(selection_metrics_args "$run")
     llm_iterate \
       --base "$base" \
       --new-type short_stack_survivor \
       --new-version "v_position_$(run_name_suffix)" \
       --goal "Improve late-position opening, stealing, and c-betting. Avoid wider calls out of position and avoid multiway spew." \
-      --metrics-run "$run/benchmark_round_01.json" \
+      "${metric_args[@]}" \
       --benchmark-iterations "$ITER_BRANCH" \
       --hands "$HANDS_BRANCH" \
+      --selection-profile staged \
+      --elimination-iterations "$ELIM_ITER_BRANCH" \
+      --elimination-hands "$ELIM_HANDS_BRANCH" \
+      --full-iterations "$FULL_ITER_BRANCH" \
+      --full-hands "$FULL_HANDS_BRANCH" \
+      "${CURVE_ARGS[@]}" \
       --seed 6500 \
-      --max-bad-setups 4 \
-      --run-name "hl_branch_position_$(run_name_suffix)"
+      --run-name "hl_branch_position"
     ;;
 
   promote-test)
@@ -218,7 +297,7 @@ case "$cmd" in
       --iterations "$ITER_STRONG" \
       --hands "$HANDS_STRONG" \
       --seed 7000 \
-      --run-name "promote_test_$(basename "$run")_$(run_name_suffix)"
+      --run-name "promote_test_$(basename "$run")"
     ;;
 
   compare-run)
@@ -227,11 +306,11 @@ case "$cmd" in
     old="$(base_dir "$run")"
     new="$(candidate_latest "$run")"
     python3 sandbox/compare.py \
-      --bots "$old" "$new" shark mathematician ref_bot_2 position_bully:v2 equity_guard:v2 \
+      --bots "$old" "$new" shark mathematician ref_bot_2 position_bully equity_guard \
       --iterations "$ITER_BRANCH" \
       --hands "$HANDS_BRANCH" \
       --seed 7100 \
-      --run-name "compare_$(basename "$run")_$(run_name_suffix)"
+      --run-name "compare_$(basename "$run")"
     ;;
 
   *)

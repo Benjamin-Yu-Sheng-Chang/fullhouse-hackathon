@@ -28,13 +28,8 @@ from sandbox.match import run_match
 
 
 BOT_ALIASES = {
-    "template": "bots/template/bot.py",
-    "aggressor": "bots/aggressor/bot.py",
-    "mathematician": "bots/mathematician/bot.py",
-    "math": "bots/mathematician/bot.py",
-    "shark": "bots/shark/bot.py",
-    "ref_bot_2": "bots/ref_bot_2/bot.py",
-    "potodds": "bots/ref_bot_2/bot.py",
+    "math": "mathematician",
+    "potodds": "ref_bot_2",
 }
 
 SETUPS = {
@@ -106,8 +101,7 @@ def _split_version_token(token: str):
 
 def _expand_bot_token(token: str, versioned_bots: dict[str, dict[str, str]], index: int):
     if token in BOT_ALIASES:
-        path = ROOT / BOT_ALIASES[token]
-        return [(token, str(path))]
+        token = BOT_ALIASES[token]
 
     bot_type, requested_version = _split_version_token(token)
     if bot_type in versioned_bots:

@@ -66,6 +66,12 @@ def _candidate_spec(token: str, role: str):
     return bot_id, path
 
 
+def _distinct_candidate_specs(old, new):
+    if old[0] != new[0]:
+        return old, new
+    return old, (f"{new[0]}_new", new[1])
+
+
 def _resolve_opponents(tokens: list[str]):
     resolved = _resolve_bot_specs(tokens)
     return [(bot_id, path) for bot_id, path in resolved.items()]
@@ -463,8 +469,10 @@ def main():
     if args.hands < 1:
         raise SystemExit("--hands must be at least 1")
 
-    old = _candidate_spec(args.old, "old")
-    new = _candidate_spec(args.new, "new")
+    old, new = _distinct_candidate_specs(
+        _candidate_spec(args.old, "old"),
+        _candidate_spec(args.new, "new"),
+    )
     setup_tokens = _setup_specs(args)
     field_setups = []
     all_bot_paths = {old[0]: old[1], new[0]: new[1]}
