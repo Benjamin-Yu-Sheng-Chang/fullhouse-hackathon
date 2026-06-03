@@ -1,0 +1,5254 @@
+{
+  "match_id": "ebfd6b13-9730-46c0-b567-0b2611abb516",
+  "tournament": "INTERNAL-Qualifier-Final-1780340697",
+  "round": 1,
+  "status": "complete",
+  "started_at": null,
+  "completed_at": "2026-06-01T19:05:13.560506+00:00",
+  "n_hands_target": 800,
+  "seed": null,
+  "bots": [
+    {
+      "bot_id": "8bef25d0-abe5-4808-abf5-f29a79b3cbc5",
+      "bot_name": "VADETbot",
+      "seat": 5,
+      "final_stack": 0,
+      "chip_delta": -10000
+    },
+    {
+      "bot_id": "cb0f0df2-d87a-4d84-93fb-5dc8b2e9786e",
+      "bot_name": "HydraData",
+      "seat": 1,
+      "final_stack": 0,
+      "chip_delta": -10000
+    },
+    {
+      "bot_id": "cfb31549-776b-49f6-b5d0-b6e16bd935b6",
+      "bot_name": "The Monty Python",
+      "seat": 3,
+      "final_stack": 0,
+      "chip_delta": -10000
+    },
+    {
+      "bot_id": "d09000b5-3ce0-40ef-9766-63786ae727e1",
+      "bot_name": "DeepStack",
+      "seat": 4,
+      "final_stack": 0,
+      "chip_delta": -10000
+    },
+    {
+      "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3",
+      "bot_name": "bot",
+      "seat": 0,
+      "final_stack": 60000,
+      "chip_delta": 50000
+    },
+    {
+      "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0",
+      "bot_name": "codex_iterated_abstract_pressure",
+      "seat": 2,
+      "final_stack": 0,
+      "chip_delta": -10000,
+      "bot_errors": []
+    }
+  ],
+  "hands": [
+    {
+      "hand_num": 0,
+      "street_ended": "preflop",
+      "pot": 350,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 2,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 3,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 4,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 5,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 250
+        },
+        {
+          "seat": 2,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 350,
+          "bot_id": "cb0f0df2-d87a-4d84-93fb-5dc8b2e9786e"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 1,
+      "street_ended": "preflop",
+      "pot": 962,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 2,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 3,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 4,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 5,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 2,
+          "action": "raise",
+          "amount": 202
+        },
+        {
+          "seat": 3,
+          "action": "raise",
+          "amount": 760
+        },
+        {
+          "seat": 2,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 962,
+          "bot_id": "cfb31549-776b-49f6-b5d0-b6e16bd935b6"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 2,
+      "street_ended": "river",
+      "pot": 20250,
+      "community_cards": [
+        "Th",
+        "3c",
+        "Ah",
+        "As",
+        "6c"
+      ],
+      "action_log": [
+        {
+          "seat": 3,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 4,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 5,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 600
+        },
+        {
+          "seat": 1,
+          "action": "call",
+          "amount": 600
+        },
+        {
+          "seat": 2,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 3,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 4,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 743
+        },
+        {
+          "seat": 1,
+          "action": "call",
+          "amount": 743
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 2127
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 5317
+        },
+        {
+          "seat": 0,
+          "action": "all_in",
+          "amount": 8657
+        },
+        {
+          "seat": 1,
+          "action": "all_in",
+          "amount": 8757
+        }
+      ],
+      "revealed_cards": {
+        "cb0f0df2-d87a-4d84-93fb-5dc8b2e9786e": [
+          "Td",
+          "Kd"
+        ],
+        "d77ab1a0-046f-4db1-9d34-bf09467674a3": [
+          "Jd",
+          "Jc"
+        ]
+      },
+      "winners": [
+        {
+          "amount": 100,
+          "bot_id": "cb0f0df2-d87a-4d84-93fb-5dc8b2e9786e"
+        },
+        {
+          "amount": 20150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 3,
+      "street_ended": "river",
+      "pot": 374,
+      "community_cards": [
+        "9d",
+        "4s",
+        "Jc",
+        "Th",
+        "Qs"
+      ],
+      "action_log": [
+        {
+          "seat": 4,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 5,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 1,
+          "action": "all_in",
+          "amount": 100
+        },
+        {
+          "seat": 2,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 3,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 4,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 5,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 5,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 5,
+          "action": "raise",
+          "amount": 124
+        },
+        {
+          "seat": 5,
+          "action": "check",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {
+        "8bef25d0-abe5-4808-abf5-f29a79b3cbc5": [
+          "Qc",
+          "6h"
+        ],
+        "cb0f0df2-d87a-4d84-93fb-5dc8b2e9786e": [
+          "2s",
+          "Ad"
+        ]
+      },
+      "winners": [
+        {
+          "amount": 374,
+          "bot_id": "8bef25d0-abe5-4808-abf5-f29a79b3cbc5"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 4,
+      "street_ended": "preflop",
+      "pot": 445,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 2,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 3,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 4,
+          "action": "raise",
+          "amount": 295
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 445,
+          "bot_id": "8bef25d0-abe5-4808-abf5-f29a79b3cbc5"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 5,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 2,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 3,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 4,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "cfb31549-776b-49f6-b5d0-b6e16bd935b6"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 6,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 2,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 3,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 4,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 2,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d09000b5-3ce0-40ef-9766-63786ae727e1"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 7,
+      "street_ended": "river",
+      "pot": 30402,
+      "community_cards": [
+        "4c",
+        "2c",
+        "2s",
+        "Ad",
+        "Jh"
+      ],
+      "action_log": [
+        {
+          "seat": 3,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 4,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 2,
+          "action": "raise",
+          "amount": 767
+        },
+        {
+          "seat": 3,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 4,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 667
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 758
+        },
+        {
+          "seat": 2,
+          "action": "raise",
+          "amount": 3199
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 2441
+        },
+        {
+          "seat": 0,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 2,
+          "action": "all_in",
+          "amount": 6186
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 6186
+        },
+        {
+          "seat": 0,
+          "action": "all_in",
+          "amount": 9948
+        }
+      ],
+      "revealed_cards": {
+        "cfb31549-776b-49f6-b5d0-b6e16bd935b6": [
+          "3d",
+          "3s"
+        ],
+        "d77ab1a0-046f-4db1-9d34-bf09467674a3": [
+          "Jc",
+          "Td"
+        ]
+      },
+      "winners": [
+        {
+          "amount": 30402,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 8,
+      "street_ended": "river",
+      "pot": 40302,
+      "community_cards": [
+        "5s",
+        "6c",
+        "8c",
+        "6s",
+        "Kh"
+      ],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 2,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 3,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 400
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 2,
+          "action": "raise",
+          "amount": 1650
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 1250
+        },
+        {
+          "seat": 2,
+          "action": "raise",
+          "amount": 1507
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 1507
+        },
+        {
+          "seat": 2,
+          "action": "raise",
+          "amount": 4773
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 18296
+        },
+        {
+          "seat": 2,
+          "action": "all_in",
+          "amount": 6693
+        },
+        {
+          "seat": 0,
+          "action": "all_in",
+          "amount": 8949
+        }
+      ],
+      "revealed_cards": {
+        "d09000b5-3ce0-40ef-9766-63786ae727e1": [
+          "Ad",
+          "Ah"
+        ],
+        "d77ab1a0-046f-4db1-9d34-bf09467674a3": [
+          "6d",
+          "9d"
+        ]
+      },
+      "winners": [
+        {
+          "amount": 40302,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 9,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 2,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "8bef25d0-abe5-4808-abf5-f29a79b3cbc5"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 10,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 2,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 2,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 11,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 2,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 12,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 2,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "8bef25d0-abe5-4808-abf5-f29a79b3cbc5"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 13,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 2,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 2,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 14,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 2,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 15,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 2,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "8bef25d0-abe5-4808-abf5-f29a79b3cbc5"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 16,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 2,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 2,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 17,
+      "street_ended": "preflop",
+      "pot": 400,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 2,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 400,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 18,
+      "street_ended": "river",
+      "pot": 18462,
+      "community_cards": [
+        "4c",
+        "2h",
+        "Qs",
+        "Jd",
+        "Jc"
+      ],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 2,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 2,
+          "action": "raise",
+          "amount": 298
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 198
+        },
+        {
+          "seat": 2,
+          "action": "raise",
+          "amount": 422
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 422
+        },
+        {
+          "seat": 2,
+          "action": "raise",
+          "amount": 973
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 973
+        },
+        {
+          "seat": 2,
+          "action": "raise",
+          "amount": 1701
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 7513
+        },
+        {
+          "seat": 2,
+          "action": "call",
+          "amount": 5812
+        }
+      ],
+      "revealed_cards": {
+        "8bef25d0-abe5-4808-abf5-f29a79b3cbc5": [
+          "As",
+          "Ac"
+        ],
+        "d77ab1a0-046f-4db1-9d34-bf09467674a3": [
+          "Jh",
+          "Kc"
+        ]
+      },
+      "winners": [
+        {
+          "amount": 18462,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 19,
+      "street_ended": "river",
+      "pot": 3479,
+      "community_cards": [
+        "4s",
+        "2s",
+        "7h",
+        "7s",
+        "Tc"
+      ],
+      "action_log": [
+        {
+          "seat": 2,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        },
+        {
+          "seat": 2,
+          "action": "all_in",
+          "amount": 994
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 894
+        },
+        {
+          "seat": 0,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 0,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 1491
+        }
+      ],
+      "revealed_cards": {
+        "8bef25d0-abe5-4808-abf5-f29a79b3cbc5": [
+          "Ac",
+          "9d"
+        ],
+        "d77ab1a0-046f-4db1-9d34-bf09467674a3": [
+          "Ts",
+          "Kc"
+        ]
+      },
+      "winners": [
+        {
+          "amount": 3479,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 20,
+      "street_ended": "preflop",
+      "pot": 400,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 400,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 21,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 22,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 23,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 24,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 25,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 26,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 27,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 28,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 29,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 30,
+      "street_ended": "preflop",
+      "pot": 400,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 400,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 31,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 32,
+      "street_ended": "preflop",
+      "pot": 400,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 400,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 33,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 34,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 35,
+      "street_ended": "river",
+      "pot": 6812,
+      "community_cards": [
+        "Kc",
+        "5c",
+        "8c",
+        "2c",
+        "4d"
+      ],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 200
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 220
+        },
+        {
+          "seat": 1,
+          "action": "call",
+          "amount": 220
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 378
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 1157
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 779
+        },
+        {
+          "seat": 0,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 1829
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 1829
+        }
+      ],
+      "revealed_cards": {
+        "d77ab1a0-046f-4db1-9d34-bf09467674a3": [
+          "8s",
+          "Jd"
+        ],
+        "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0": [
+          "3c",
+          "3h"
+        ]
+      },
+      "winners": [
+        {
+          "amount": 6812,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 36,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 37,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 38,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 39,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 40,
+      "street_ended": "preflop",
+      "pot": 400,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 400,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 41,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 42,
+      "street_ended": "preflop",
+      "pot": 400,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 400,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 43,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 44,
+      "street_ended": "preflop",
+      "pot": 400,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 400,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 45,
+      "street_ended": "river",
+      "pot": 1596,
+      "community_cards": [
+        "Ah",
+        "6h",
+        "7c",
+        "As",
+        "7h"
+      ],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 200
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 180
+        },
+        {
+          "seat": 1,
+          "action": "call",
+          "amount": 180
+        },
+        {
+          "seat": 0,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 1,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 418
+        },
+        {
+          "seat": 1,
+          "action": "call",
+          "amount": 418
+        }
+      ],
+      "revealed_cards": {
+        "d77ab1a0-046f-4db1-9d34-bf09467674a3": [
+          "Qc",
+          "Kh"
+        ],
+        "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0": [
+          "Th",
+          "Js"
+        ]
+      },
+      "winners": [
+        {
+          "amount": 1596,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 46,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 47,
+      "street_ended": "river",
+      "pot": 1444,
+      "community_cards": [
+        "Qs",
+        "3c",
+        "5h",
+        "Kh",
+        "Kc"
+      ],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 200
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 1,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 180
+        },
+        {
+          "seat": 1,
+          "action": "call",
+          "amount": 180
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 342
+        },
+        {
+          "seat": 1,
+          "action": "call",
+          "amount": 342
+        }
+      ],
+      "revealed_cards": {
+        "d77ab1a0-046f-4db1-9d34-bf09467674a3": [
+          "8c",
+          "Ac"
+        ],
+        "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0": [
+          "Ad",
+          "7s"
+        ]
+      },
+      "winners": [
+        {
+          "amount": 1444,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 48,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 49,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 50,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 51,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 52,
+      "street_ended": "preflop",
+      "pot": 400,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 400,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 53,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 54,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 55,
+      "street_ended": "river",
+      "pot": 2496,
+      "community_cards": [
+        "Kh",
+        "Qh",
+        "6c",
+        "Kc",
+        "5c"
+      ],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 200
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 208
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 208
+        },
+        {
+          "seat": 0,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 424
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 424
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 832
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 2496,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 56,
+      "street_ended": "preflop",
+      "pot": 400,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 400,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 57,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 58,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 59,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 60,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 61,
+      "street_ended": "river",
+      "pot": 4664,
+      "community_cards": [
+        "7s",
+        "8s",
+        "Qs",
+        "5s",
+        "6s"
+      ],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 200
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 300
+        },
+        {
+          "seat": 0,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 580
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 580
+        },
+        {
+          "seat": 0,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 1252
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 1252
+        }
+      ],
+      "revealed_cards": {
+        "d77ab1a0-046f-4db1-9d34-bf09467674a3": [
+          "6d",
+          "9c"
+        ],
+        "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0": [
+          "As",
+          "Js"
+        ]
+      },
+      "winners": [
+        {
+          "amount": 4664,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 62,
+      "street_ended": "preflop",
+      "pot": 400,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 400,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 63,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 64,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 65,
+      "street_ended": "preflop",
+      "pot": 800,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 200
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 600
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 800,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 66,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 67,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 68,
+      "street_ended": "preflop",
+      "pot": 450,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 350
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 450,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 69,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 70,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 71,
+      "street_ended": "flop",
+      "pot": 1068,
+      "community_cards": [
+        "2d",
+        "Ts",
+        "As"
+      ],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 200
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 200
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 468
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 1068,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 72,
+      "street_ended": "preflop",
+      "pot": 400,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 400,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 73,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 74,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 75,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 76,
+      "street_ended": "preflop",
+      "pot": 400,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 400,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 77,
+      "street_ended": "river",
+      "pot": 20520,
+      "community_cards": [
+        "Ts",
+        "8h",
+        "4c",
+        "Ad",
+        "Kc"
+      ],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 200
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 180
+        },
+        {
+          "seat": 1,
+          "action": "call",
+          "amount": 180
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 570
+        },
+        {
+          "seat": 1,
+          "action": "call",
+          "amount": 570
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 1425
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 2850
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 9310
+        },
+        {
+          "seat": 1,
+          "action": "call",
+          "amount": 6460
+        }
+      ],
+      "revealed_cards": {
+        "d77ab1a0-046f-4db1-9d34-bf09467674a3": [
+          "As",
+          "6s"
+        ],
+        "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0": [
+          "Kh",
+          "Qc"
+        ]
+      },
+      "winners": [
+        {
+          "amount": 20520,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 78,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 79,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 80,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 81,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 82,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 83,
+      "street_ended": "turn",
+      "pot": 1750,
+      "community_cards": [
+        "4h",
+        "Ks",
+        "6s",
+        "3d"
+      ],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 200
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "call",
+          "amount": 300
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 750
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 1750,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 84,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 85,
+      "street_ended": "river",
+      "pot": 2644,
+      "community_cards": [
+        "Td",
+        "6h",
+        "3c",
+        "Ks",
+        "Jc"
+      ],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 200
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 220
+        },
+        {
+          "seat": 1,
+          "action": "call",
+          "amount": 220
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 462
+        },
+        {
+          "seat": 1,
+          "action": "call",
+          "amount": 462
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 938
+        }
+      ],
+      "revealed_cards": {
+        "d77ab1a0-046f-4db1-9d34-bf09467674a3": [
+          "Ts",
+          "7s"
+        ],
+        "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0": [
+          "Tc",
+          "Ac"
+        ]
+      },
+      "winners": [
+        {
+          "amount": 996,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        },
+        {
+          "amount": 1648,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 86,
+      "street_ended": "preflop",
+      "pot": 400,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 400,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 87,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 88,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 89,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 90,
+      "street_ended": "river",
+      "pot": 2996,
+      "community_cards": [
+        "6d",
+        "2c",
+        "6s",
+        "Qc",
+        "Ad"
+      ],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 500
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 200
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 750
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 750
+        },
+        {
+          "seat": 1,
+          "action": "all_in",
+          "amount": 248
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 248
+        },
+        {
+          "seat": 0,
+          "action": "check",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {
+        "d77ab1a0-046f-4db1-9d34-bf09467674a3": [
+          "2h",
+          "3h"
+        ],
+        "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0": [
+          "Ah",
+          "Ks"
+        ]
+      },
+      "winners": [
+        {
+          "amount": 2996,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 91,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 92,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 93,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 94,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 95,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 96,
+      "street_ended": "preflop",
+      "pot": 400,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 400,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 97,
+      "street_ended": "turn",
+      "pot": 1750,
+      "community_cards": [
+        "3d",
+        "9d",
+        "7c",
+        "5h"
+      ],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 200
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 300
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 750
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 1750,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 98,
+      "street_ended": "preflop",
+      "pot": 450,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 350
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 450,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 99,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 100,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 101,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 102,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 103,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 104,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 105,
+      "street_ended": "river",
+      "pot": 1550,
+      "community_cards": [
+        "4c",
+        "2c",
+        "4s",
+        "3d",
+        "6h"
+      ],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 200
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 180
+        },
+        {
+          "seat": 1,
+          "action": "call",
+          "amount": 180
+        },
+        {
+          "seat": 0,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 1,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 0,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 395
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 395
+        }
+      ],
+      "revealed_cards": {
+        "d77ab1a0-046f-4db1-9d34-bf09467674a3": [
+          "8s",
+          "2h"
+        ],
+        "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0": [
+          "Kh",
+          "Qh"
+        ]
+      },
+      "winners": [
+        {
+          "amount": 1550,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 106,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 107,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 108,
+      "street_ended": "preflop",
+      "pot": 400,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 400,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 109,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 110,
+      "street_ended": "preflop",
+      "pot": 400,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 400,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 111,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 112,
+      "street_ended": "preflop",
+      "pot": 450,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 350
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 450,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 113,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 114,
+      "street_ended": "preflop",
+      "pot": 400,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 400,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 115,
+      "street_ended": "turn",
+      "pot": 1218,
+      "community_cards": [
+        "3h",
+        "3d",
+        "8h",
+        "6d"
+      ],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "raise",
+          "amount": 200
+        },
+        {
+          "seat": 0,
+          "action": "call",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 220
+        },
+        {
+          "seat": 1,
+          "action": "call",
+          "amount": 220
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 378
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 1218,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 116,
+      "street_ended": "preflop",
+      "pot": 400,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 400,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 117,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 118,
+      "street_ended": "preflop",
+      "pot": 400,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 400,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 119,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 120,
+      "street_ended": "preflop",
+      "pot": 400,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 300
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 400,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 121,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 122,
+      "street_ended": "river",
+      "pot": 441,
+      "community_cards": [
+        "6h",
+        "Qd",
+        "Jc",
+        "6c",
+        "Js"
+      ],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 51
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 153
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 137
+        },
+        {
+          "seat": 0,
+          "action": "check",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {
+        "d77ab1a0-046f-4db1-9d34-bf09467674a3": [
+          "2d",
+          "2c"
+        ],
+        "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0": [
+          "4s",
+          "5c"
+        ]
+      },
+      "winners": [
+        {
+          "amount": 390,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        },
+        {
+          "amount": 51,
+          "bot_id": "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 123,
+      "street_ended": "preflop",
+      "pot": 150,
+      "community_cards": [],
+      "action_log": [
+        {
+          "seat": 1,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 0,
+          "action": "big_blind",
+          "amount": 100
+        },
+        {
+          "seat": 1,
+          "action": "fold",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {},
+      "winners": [
+        {
+          "amount": 150,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    },
+    {
+      "hand_num": 124,
+      "street_ended": "river",
+      "pot": 151,
+      "community_cards": [
+        "7s",
+        "6c",
+        "6d",
+        "8c",
+        "5c"
+      ],
+      "action_log": [
+        {
+          "seat": 0,
+          "action": "small_blind",
+          "amount": 50
+        },
+        {
+          "seat": 1,
+          "action": "big_blind",
+          "amount": 1
+        },
+        {
+          "seat": 0,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 0,
+          "action": "check",
+          "amount": 0
+        },
+        {
+          "seat": 0,
+          "action": "raise",
+          "amount": 100
+        },
+        {
+          "seat": 0,
+          "action": "check",
+          "amount": 0
+        }
+      ],
+      "revealed_cards": {
+        "d77ab1a0-046f-4db1-9d34-bf09467674a3": [
+          "Jh",
+          "8d"
+        ],
+        "ffae508c-d5f4-47f8-a3ea-73bb0ea11cd0": [
+          "Jd",
+          "5s"
+        ]
+      },
+      "winners": [
+        {
+          "amount": 151,
+          "bot_id": "d77ab1a0-046f-4db1-9d34-bf09467674a3"
+        }
+      ],
+      "my_decisions": []
+    }
+  ]
+}

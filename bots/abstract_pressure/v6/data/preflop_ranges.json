@@ -1,0 +1,7838 @@
+{
+  "source_name": "PokerCoaching.com Online 6-Max Implementable GTO Charts",
+  "source_url": "https://poker-coaching.s3.amazonaws.com/tools/preflop-charts/online-6max-gto-charts.pdf",
+  "assumptions": {
+    "players": 6,
+    "stack_depth_bb": 100,
+    "rfi_raise_size_bb": 2.5,
+    "small_blind_raise_size_bb": 3.0,
+    "notes": "Frequencies are estimated from rendered chart cell color coverage. Red maps to raise/3bet, blue maps to call/check as labelled, and Blind-vs-Blind SB non-raise colors map to limp/call. Fully colored cells are normalized to 100% to avoid counting black hand-label text as fold frequency; partially filled cells keep their estimated action/fold mix."
+  },
+  "rfi": {
+    "LJ": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A7s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A6s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A3s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "88"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "77"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "66"
+          ],
+          "raise": 1.0
+        }
+      ],
+      "raise_size_bb": 2.5
+    },
+    "HJ": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A7s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A6s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A3s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A2s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K7s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K6s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QTo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "98s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "88"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "87s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "77"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "76s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "66"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "55"
+          ],
+          "raise": 1.0
+        }
+      ],
+      "raise_size_bb": 2.5
+    },
+    "CO": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A7s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A6s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A3s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A2s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K7s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K6s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K3s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q7s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q6s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QTo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JTo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T7s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A9o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "98s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "97s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A8o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "88"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "87s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "77"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "76s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "66"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "55"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "44"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "33"
+          ],
+          "raise": 1.0
+        }
+      ],
+      "raise_size_bb": 2.5
+    },
+    "BTN": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A7s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A6s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A3s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A2s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K7s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K6s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K3s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K2s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q7s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q6s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q3s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J7s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J6s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QTo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JTo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T7s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T6s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A9o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K9o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q9o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J9o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T9o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "98s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "97s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "96s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A8o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K8o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T8o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "98o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "88"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "87s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "86s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "85s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A7o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "77"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "76s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "75s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A6o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "66"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "65s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "64s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A5o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "55"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "54s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "53s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A4o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "44"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "33"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "22"
+          ],
+          "raise": 1.0
+        }
+      ],
+      "raise_size_bb": 2.5
+    },
+    "SB": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 0.86,
+          "call": 0.14
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "call": 0.56,
+          "fold": 0.44
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "call": 0.57,
+          "fold": 0.43
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A7s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A6s"
+          ],
+          "raise": 0.05,
+          "call": 0.95
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A4s"
+          ],
+          "raise": 0.04,
+          "call": 0.96
+        },
+        {
+          "hands": [
+            "A3s"
+          ],
+          "raise": 0.04,
+          "call": 0.96
+        },
+        {
+          "hands": [
+            "A2s"
+          ],
+          "raise": 0.04,
+          "call": 0.96
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "call": 0.56,
+          "fold": 0.44
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 0.94,
+          "call": 0.06
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "call": 0.51,
+          "fold": 0.49
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K9s"
+          ],
+          "call": 0.51,
+          "fold": 0.49
+        },
+        {
+          "hands": [
+            "K8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K7s"
+          ],
+          "raise": 0.06,
+          "call": 0.94
+        },
+        {
+          "hands": [
+            "K6s"
+          ],
+          "raise": 0.06,
+          "call": 0.94
+        },
+        {
+          "hands": [
+            "K5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K4s"
+          ],
+          "raise": 0.06,
+          "call": 0.94
+        },
+        {
+          "hands": [
+            "K3s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K2s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "raise": 0.89,
+          "call": 0.11
+        },
+        {
+          "hands": [
+            "KQo"
+          ],
+          "raise": 0.04,
+          "call": 0.96
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 0.91,
+          "call": 0.09
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q9s"
+          ],
+          "call": 0.48,
+          "fold": 0.52
+        },
+        {
+          "hands": [
+            "Q8s"
+          ],
+          "raise": 0.05,
+          "call": 0.95
+        },
+        {
+          "hands": [
+            "Q7s"
+          ],
+          "raise": 0.04,
+          "call": 0.96
+        },
+        {
+          "hands": [
+            "Q6s"
+          ],
+          "raise": 0.05,
+          "call": 0.95
+        },
+        {
+          "hands": [
+            "Q5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q3s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q2s"
+          ],
+          "raise": 0.73,
+          "fold": 0.27
+        },
+        {
+          "hands": [
+            "AJo"
+          ],
+          "raise": 0.9,
+          "call": 0.1
+        },
+        {
+          "hands": [
+            "KJo"
+          ],
+          "raise": 0.9,
+          "call": 0.1
+        },
+        {
+          "hands": [
+            "QJo"
+          ],
+          "raise": 0.05,
+          "call": 0.95
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 0.92,
+          "call": 0.08
+        },
+        {
+          "hands": [
+            "JTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J9s"
+          ],
+          "call": 0.53,
+          "fold": 0.47
+        },
+        {
+          "hands": [
+            "J8s"
+          ],
+          "raise": 0.06,
+          "call": 0.94
+        },
+        {
+          "hands": [
+            "J7s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J6s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J3s"
+          ],
+          "call": 0.96,
+          "fold": 0.04
+        },
+        {
+          "hands": [
+            "J2s"
+          ],
+          "raise": 0.05,
+          "call": 0.95
+        },
+        {
+          "hands": [
+            "ATo"
+          ],
+          "raise": 0.05,
+          "call": 0.95
+        },
+        {
+          "hands": [
+            "KTo"
+          ],
+          "call": 0.96,
+          "fold": 0.04
+        },
+        {
+          "hands": [
+            "QTo"
+          ],
+          "raise": 0.05,
+          "call": 0.95
+        },
+        {
+          "hands": [
+            "JTo"
+          ],
+          "raise": 0.04,
+          "call": 0.96
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "call": 0.99
+        },
+        {
+          "hands": [
+            "T9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T8s"
+          ],
+          "raise": 0.04,
+          "call": 0.96
+        },
+        {
+          "hands": [
+            "T7s"
+          ],
+          "raise": 0.04,
+          "call": 0.96
+        },
+        {
+          "hands": [
+            "T6s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T4s"
+          ],
+          "call": 0.97,
+          "fold": 0.03
+        },
+        {
+          "hands": [
+            "T3s"
+          ],
+          "call": 0.98
+        },
+        {
+          "hands": [
+            "A9o"
+          ],
+          "raise": 0.06,
+          "call": 0.94
+        },
+        {
+          "hands": [
+            "K9o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q9o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J9o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T9o"
+          ],
+          "raise": 0.05,
+          "call": 0.95
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "call": 0.71,
+          "fold": 0.29
+        },
+        {
+          "hands": [
+            "98s"
+          ],
+          "call": 0.53,
+          "fold": 0.47
+        },
+        {
+          "hands": [
+            "97s"
+          ],
+          "raise": 0.06,
+          "call": 0.94
+        },
+        {
+          "hands": [
+            "96s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "95s"
+          ],
+          "raise": 0.04,
+          "call": 0.96
+        },
+        {
+          "hands": [
+            "94s"
+          ],
+          "call": 0.96,
+          "fold": 0.04
+        },
+        {
+          "hands": [
+            "A8o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K8o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q8o"
+          ],
+          "call": 0.97,
+          "fold": 0.03
+        },
+        {
+          "hands": [
+            "J8o"
+          ],
+          "raise": 0.05,
+          "call": 0.95
+        },
+        {
+          "hands": [
+            "T8o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "98o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "88"
+          ],
+          "call": 0.99
+        },
+        {
+          "hands": [
+            "87s"
+          ],
+          "call": 0.47,
+          "fold": 0.53
+        },
+        {
+          "hands": [
+            "86s"
+          ],
+          "call": 0.96,
+          "fold": 0.04
+        },
+        {
+          "hands": [
+            "85s"
+          ],
+          "raise": 0.04,
+          "call": 0.96
+        },
+        {
+          "hands": [
+            "84s"
+          ],
+          "call": 0.96,
+          "fold": 0.04
+        },
+        {
+          "hands": [
+            "A7o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K7o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q7o"
+          ],
+          "call": 0.97,
+          "fold": 0.03
+        },
+        {
+          "hands": [
+            "J7o"
+          ],
+          "raise": 0.05,
+          "call": 0.95
+        },
+        {
+          "hands": [
+            "T7o"
+          ],
+          "call": 0.97,
+          "fold": 0.03
+        },
+        {
+          "hands": [
+            "97o"
+          ],
+          "raise": 0.04,
+          "call": 0.96
+        },
+        {
+          "hands": [
+            "87o"
+          ],
+          "raise": 0.05,
+          "call": 0.95
+        },
+        {
+          "hands": [
+            "77"
+          ],
+          "raise": 0.05,
+          "call": 0.95
+        },
+        {
+          "hands": [
+            "76s"
+          ],
+          "call": 0.97,
+          "fold": 0.03
+        },
+        {
+          "hands": [
+            "75s"
+          ],
+          "call": 0.97,
+          "fold": 0.03
+        },
+        {
+          "hands": [
+            "74s"
+          ],
+          "call": 0.98
+        },
+        {
+          "hands": [
+            "A6o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K6o"
+          ],
+          "call": 0.97,
+          "fold": 0.03
+        },
+        {
+          "hands": [
+            "Q6o"
+          ],
+          "call": 0.97,
+          "fold": 0.03
+        },
+        {
+          "hands": [
+            "86o"
+          ],
+          "raise": 0.04,
+          "call": 0.96
+        },
+        {
+          "hands": [
+            "76o"
+          ],
+          "raise": 0.04,
+          "call": 0.96
+        },
+        {
+          "hands": [
+            "66"
+          ],
+          "raise": 0.06,
+          "call": 0.94
+        },
+        {
+          "hands": [
+            "65s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "64s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "63s"
+          ],
+          "raise": 0.05,
+          "call": 0.95
+        },
+        {
+          "hands": [
+            "A5o"
+          ],
+          "raise": 0.06,
+          "call": 0.94
+        },
+        {
+          "hands": [
+            "K5o"
+          ],
+          "call": 0.97,
+          "fold": 0.03
+        },
+        {
+          "hands": [
+            "Q5o"
+          ],
+          "call": 0.98
+        },
+        {
+          "hands": [
+            "55"
+          ],
+          "raise": 0.07,
+          "call": 0.93
+        },
+        {
+          "hands": [
+            "54s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "53s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A4o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K4o"
+          ],
+          "call": 0.98
+        },
+        {
+          "hands": [
+            "44"
+          ],
+          "call": 0.97,
+          "fold": 0.03
+        },
+        {
+          "hands": [
+            "43s"
+          ],
+          "call": 0.98
+        },
+        {
+          "hands": [
+            "A3o"
+          ],
+          "call": 0.98
+        },
+        {
+          "hands": [
+            "33"
+          ],
+          "raise": 0.95,
+          "call": 0.05
+        },
+        {
+          "hands": [
+            "A2o"
+          ],
+          "call": 0.97,
+          "fold": 0.03
+        },
+        {
+          "hands": [
+            "22"
+          ],
+          "raise": 0.92,
+          "call": 0.08
+        }
+      ],
+      "raise_size_bb": 3.0
+    }
+  },
+  "vs_rfi": {
+    "HJ_vs_LJ": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "raise": 1.0
+        }
+      ],
+      "raise_multiplier": 3.5
+    },
+    "CO_vs_LJ": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "88"
+          ],
+          "raise": 1.0
+        }
+      ],
+      "raise_multiplier": 3.5
+    },
+    "CO_vs_HJ": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "88"
+          ],
+          "raise": 1.0
+        }
+      ],
+      "raise_multiplier": 3.5
+    },
+    "BTN_vs_LJ": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A3s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "KQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QTs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "AJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JTs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "88"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "77"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "76s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "66"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "65s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "55"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "54s"
+          ],
+          "call": 1.0
+        }
+      ],
+      "raise_multiplier": 3.5
+    },
+    "BTN_vs_HJ": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A7s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A3s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "KQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "QTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JTs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "98s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "88"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "87s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "77"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "66"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "55"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "44"
+          ],
+          "call": 0.74,
+          "fold": 0.26
+        }
+      ],
+      "raise_multiplier": 3.5
+    },
+    "BTN_vs_CO": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A9s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A7s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A6s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A3s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "KQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QTs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T9s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "98s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "88"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "77"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "66"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "55"
+          ],
+          "raise": 1.0
+        }
+      ],
+      "raise_multiplier": 3.5
+    },
+    "SB_vs_LJ": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "raise": 1.0
+        }
+      ],
+      "raise_multiplier": 4.0
+    },
+    "SB_vs_HJ": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "88"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "77"
+          ],
+          "raise": 1.0
+        }
+      ],
+      "raise_multiplier": 4.0
+    },
+    "SB_vs_CO": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "88"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "77"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "66"
+          ],
+          "raise": 1.0
+        }
+      ],
+      "raise_multiplier": 4.0
+    },
+    "SB_vs_BTN": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A7s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "88"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "77"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "66"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "55"
+          ],
+          "raise": 1.0
+        }
+      ],
+      "raise_multiplier": 4.0
+    },
+    "BB_vs_LJ": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A9s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A6s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A3s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A2s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K9s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K6s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K5s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K4s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K3s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K2s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "KQo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QTs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q9s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q6s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q5s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "AJo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "KJo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "QJo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J9s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "ATo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "JTo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T9s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "98s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "97s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "96s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "88"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "87s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "86s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "85s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "77"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "76s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "75s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "74s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "66"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "65s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "64s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "63s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "55"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "54s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "53s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "44"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "43s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "33"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "32s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "22"
+          ],
+          "call": 1.0
+        }
+      ],
+      "raise_multiplier": 4.0
+    },
+    "BB_vs_HJ": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A6s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A3s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A2s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K9s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K6s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K4s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K3s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K2s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "KQo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q9s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q6s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q5s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "AJo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "KJo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "QJo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J9s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "ATo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "KTo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "QTo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "JTo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T9s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A9o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "98s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "97s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "96s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "88"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "87s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "86s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "85s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "77"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "76s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "75s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "74s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "66"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "65s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "64s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "63s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "55"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "54s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "53s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "44"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "43s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "33"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "22"
+          ],
+          "call": 1.0
+        }
+      ],
+      "raise_multiplier": 4.0
+    },
+    "BB_vs_CO": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A6s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A3s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A2s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K9s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K6s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K5s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K4s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K3s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K2s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q6s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q5s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q4s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q3s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "AJo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "KJo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "QJo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J6s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "ATo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "KTo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "QTo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "JTo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A9o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T9o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "98s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "97s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "96s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A8o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "88"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "87s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "86s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "85s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "77"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "76s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "75s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "74s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "66"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "65s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "64s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "63s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A5o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "55"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "54s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "53s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "52s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "44"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "43s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "33"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "22"
+          ],
+          "call": 1.0
+        }
+      ],
+      "raise_multiplier": 4.0
+    },
+    "BB_vs_BTN": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A9s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A6s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A3s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A2s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K6s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K5s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K4s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K3s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K2s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q6s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q5s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q4s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q3s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q2s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "AJo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "KJo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "QJo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J6s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J5s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J4s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J3s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J2s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "ATo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "KTo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "QTo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "JTo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T6s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T5s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T4s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T3s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T2s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A9o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K9o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q9o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J9o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T9o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "98s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "97s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "96s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "95s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "94s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A8o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K8o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q8o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J8o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T8o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "98o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "88"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "87s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "86s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "85s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "84s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A7o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K7o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "87o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "77"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "76s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "75s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "74s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "73s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A6o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K6o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "76o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "66"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "65s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "64s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "63s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "62s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A5o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "65o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "55"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "54s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "53s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "52s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A4o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "54o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "44"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "43s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "42s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A3o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "33"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "32s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "22"
+          ],
+          "call": 1.0
+        }
+      ],
+      "raise_multiplier": 4.0
+    },
+    "BB_vs_SB": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A9s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A6s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A3s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A2s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K9s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K6s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K5s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K4s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K3s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K2s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QTs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q9s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q6s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q5s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q4s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q3s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q2s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "AJo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "KJo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "QJo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JTs"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J9s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J6s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J4s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J3s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J2s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "ATo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "KTo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "QTo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "JTo"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T9s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T8s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T7s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T6s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T4s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T3s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T2s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A9o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K9o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q9o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J9o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "T9o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "98s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "97s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "96s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "95s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "94s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "93s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "92s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A8o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K8o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q8o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J8o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T8o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "98o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "88"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "87s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "86s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "85s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "84s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A7o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K7o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "Q7o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "J7o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T7o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "97o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "87o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "77"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "76s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "75s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "74s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "73s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A6o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K6o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q6o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "86o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "76o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "66"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "65s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "64s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "63s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "62s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A5o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "K5o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "65o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "55"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "54s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "53s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "52s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A4o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "54o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "44"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "43s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "42s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A3o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "33"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "32s"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "A2o"
+          ],
+          "call": 1.0
+        },
+        {
+          "hands": [
+            "22"
+          ],
+          "call": 1.0
+        }
+      ],
+      "raise_multiplier": 3.5
+    }
+  },
+  "vs_limp": {
+    "BB_vs_SB": {
+      "frequencies": [
+        {
+          "hands": [
+            "AA"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AKs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "AJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A7s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "A6s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "A5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A3s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A2s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "AKo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KK"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K8s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "K7s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "K6s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K5s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K4s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "K3s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "K2s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "AQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KQo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QQ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q8s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "Q7s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "Q6s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "Q5s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "Q4s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "Q3s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "Q2s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "AJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KJo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "QJo"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "JJ"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "JTs"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J7s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "J6s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "J5s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "J4s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "J3s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "J2s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "ATo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "KTo"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "QTo"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "JTo"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "TT"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T9s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T8s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T7s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "T6s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "T5s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "T4s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T3s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T2s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A9o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "K9o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "Q9o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "J9o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "T9o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "99"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "98s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "97s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "96s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "95s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "94s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "93s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "92s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A8o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "K8o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "Q8o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "J8o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "T8o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "98o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "88"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "87s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "86s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "85s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "84s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "83s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "82s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "A7o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "K7o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "Q7o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "J7o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T7o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "97o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "87o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "77"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "76s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "75s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "74s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "73s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "72s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "A6o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "K6o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "Q6o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J6o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T6o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "96o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "86o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "76o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "66"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "65s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "64s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "63s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "62s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "A5o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "K5o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q5o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J5o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "T5o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "95o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "85o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "75o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "65o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "55"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "54s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "53s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "52s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "A4o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "K4o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "Q4o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "J4o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "T4o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "94o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "84o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "74o"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "64o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "54o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "44"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "43s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "42s"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "A3o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "K3o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "Q3o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "J3o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "T3o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "93o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "83o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "73o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "63o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "53o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "43o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "33"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "32s"
+          ],
+          "raise": 1.0
+        },
+        {
+          "hands": [
+            "A2o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "K2o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "Q2o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "J2o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "T2o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "92o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "82o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "72o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "62o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "52o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "42o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "32o"
+          ],
+          "check": 1.0
+        },
+        {
+          "hands": [
+            "22"
+          ],
+          "check": 1.0
+        }
+      ],
+      "raise_size_bb": 3.5
+    }
+  }
+}
